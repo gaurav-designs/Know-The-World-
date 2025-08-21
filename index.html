@@ -1,73 +1,135 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Know The World - Homepage</title>
+  <title>Know The World</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f6f9;
+      background: #f0f8ff;
       color: #333;
     }
     header {
-      background: linear-gradient(to right, #1c1c84, #2a9df4);
+      background: linear-gradient(to right, #1e3c72, #2a5298);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 25px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+    .search-box {
+      margin-top: 15px;
+    }
+    .search-box input {
+      width: 60%;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    /* Scrolling slogans */
+    .slogan-bar {
+      background: #e6e6e6;
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
+    }
+    .slogan-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 20s linear infinite;
+      font-style: italic;
+      font-size: 1rem;
+      color: #1e3c72;
+    }
+    @keyframes scroll {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
     .container {
-      max-width: 1000px;
-      margin: 30px auto;
+      max-width: 800px;
+      margin: auto;
       padding: 20px;
     }
-    .countries {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    ul {
+      list-style: none;
+      padding: 0;
     }
-    .country {
+    li {
+      margin: 12px 0;
       background: white;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
       text-align: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
     }
-    .country:hover {
-      transform: translateY(-5px);
-      background: #eaf4ff;
+    li:hover {
+      transform: scale(1.05);
+      background: #f9f9f9;
     }
     a {
       text-decoration: none;
-      color: #1c1c84;
+      color: #1e3c72;
+      font-weight: bold;
+      font-size: 1.3rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Know The World 🌍</h1>
-    <p>Explore information about different countries</p>
-  </header>  <div class="container">
-    <div class="countries">
-      <div class="country"><a href="india.html">🇮🇳 India</a></div>
-      <div class="country"><a href="china.html">🇨🇳 China</a></div>
-      <div class="country"><a href="russia.html">🇷🇺 Russia</a></div>
-      <div class="country"><a href="japan.html">🇯🇵 Japan</a></div>
-      <div class="country"><a href="france.html">🇫🇷 France</a></div>
-      <div class="country"><a href="spain.html">🇪🇸 Spain</a></div>
-      <div class="country"><a href="usa.html">🇺🇸 United States</a></div>
-      <div class="country"><a href="italy.html">🇮🇹 Italy</a></div>
-      <div class="country"><a href="turkey.html">🇹🇷 Turkey</a></div>
-      <div class="country"><a href="mexico.html">🇲🇽 Mexico</a></div>
+    <h1>🌍 Know The World</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Search for a country...">
+    </div>
+  </header>
+
+  <!-- Slogan moving from right to left -->
+  <div class="slogan-bar">
+    <div class="slogan-text">
+      "The world is a book, and those who do not travel read only one page." – Saint Augustine &nbsp;&nbsp; | &nbsp;&nbsp;
+      "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert &nbsp;&nbsp; | &nbsp;&nbsp;
+      "To travel is to live." – Hans Christian Andersen
     </div>
   </div>
+
+  <div class="container">
+    <ul id="countryList">
+      <li><a href="india.html">🇮🇳 India</a></li>
+      <li><a href="china.html">🇨🇳 China</a></li>
+      <li><a href="russia.html">🇷🇺 Russia</a></li>
+      <li><a href="japan.html">🇯🇵 Japan</a></li>
+      <li><a href="france.html">🇫🇷 France</a></li>
+      <li><a href="spain.html">🇪🇸 Spain</a></li>
+      <li><a href="usa.html">🇺🇸 United States</a></li>
+      <li><a href="italy.html">🇮🇹 Italy</a></li>
+      <li><a href="turkey.html">🇹🇷 Turkey</a></li>
+      <li><a href="mexico.html">🇲🇽 Mexico</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // Simple search filter for countries
+    const searchInput = document.getElementById("searchInput");
+    const countryList = document.getElementById("countryList").getElementsByTagName("li");
+
+    searchInput.addEventListener("keyup", function() {
+      let filter = searchInput.value.toLowerCase();
+      for (let i = 0; i < countryList.length; i++) {
+        let text = countryList[i].innerText.toLowerCase();
+        countryList[i].style.display = text.includes(filter) ? "" : "none";
+      }
+    });
+  </script>
 </body>
 </html>
