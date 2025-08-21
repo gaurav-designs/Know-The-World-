@@ -8,104 +8,113 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f6f9;
-      color: #333;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
     }
     header {
-      background: linear-gradient(to right, #0039a6, #d52b1e, #ffffff);
-      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      background: rgba(0,0,0,0.3);
+    }
+    .accordion {
+      width: 90%;
+      margin: 20px auto;
+    }
+    .accordion button {
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .accordion button:hover {
+      background-color: #ffd166;
+    }
+    .accordion button.active {
+      background-color: #ffcc80;
+    }
+    .accordion .panel {
+      padding: 0 15px;
+      background: rgba(255,255,255,0.9);
+      color: #000;
+      display: none;
+      overflow: hidden;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 15px;
+    }
+    .accordion .panel p {
+      padding: 15px;
+    }
+    footer {
       text-align: center;
       padding: 20px;
-    }
-    header h1 {
-      margin: 0;
-      color: #0039a6;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    section h2 {
-      color: #d52b1e;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background: #0039a6;
-      color: white;
+      background: rgba(0,0,0,0.4);
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Russia 🇷🇺</h1>
-  </header>
+  <header>🇷🇺 Russia - Know The World</header>
 
-  <div class="container">
-    <section>
-      <h2>Introduction</h2>
-      <p>Russia is the largest country in the world, spanning Eastern Europe and northern Asia. It covers more than one-eighth of Earth’s inhabited land area and is rich in natural resources, history, and culture.</p>
-    </section>
+  <div class="accordion">
+    <button>Geography</button>
+    <div class="panel">
+      <p>Russia is the largest country in the world, spanning Eastern Europe and Northern Asia. It shares borders with 14 countries and has diverse landscapes, including tundra, forests, mountains, and vast plains.</p>
+    </div>
 
-    <section>
-      <h2>Geography</h2>
-      <p>Russia stretches across 11 time zones and shares borders with 14 countries. It has diverse landscapes, including tundra, forests, mountains, and vast plains. The Ural Mountains traditionally divide Europe and Asia.</p>
-    </section>
+    <button>Population</button>
+    <div class="panel">
+      <p>Russia has a population of about 146 million people, making it one of the most populous countries in the world. Moscow is the capital and the most populous city.</p>
+    </div>
 
-    <section>
-      <h2>Population</h2>
-      <p>Russia’s population is about 143 million (2025). Most people live in the European part, where major cities like Moscow and Saint Petersburg are located. The population density is low in Siberia and the Far East.</p>
-    </section>
+    <button>Government</button>
+    <div class="panel">
+      <p>Russia is a federal semi-presidential republic. The President is the head of state, while the Prime Minister is the head of government.</p>
+    </div>
 
-    <section>
-      <h2>Politics and Government</h2>
-      <p>Russia is a federal semi-presidential republic. The President is the head of state, while the Prime Minister is the head of government. The current President is Vladimir Putin, and the Prime Minister is Mikhail Mishustin.</p>
-    </section>
+    <button>Economy</button>
+    <div class="panel">
+      <p>Russia’s economy is resource-rich, heavily dependent on oil, natural gas, and minerals. It is also a major producer of wheat and has industries in defense, aerospace, and energy.</p>
+    </div>
 
-    <section>
-      <h2>Economy</h2>
-      <p>Russia has a resource-rich economy, with oil, natural gas, coal, and minerals playing a major role. It is one of the world’s largest energy exporters. Other industries include manufacturing, defense, and agriculture.</p>
-    </section>
+    <button>Culture</button>
+    <div class="panel">
+      <p>Russian culture is famous for its literature, ballet, art, and classical music. Writers like Tolstoy and Dostoevsky, and composers like Tchaikovsky are globally respected.</p>
+    </div>
 
-    <section>
-      <h2>Culture</h2>
-      <p>Russian culture is famous for its literature, ballet, music, and art. Writers like Leo Tolstoy and Fyodor Dostoevsky, and composers like Tchaikovsky are world-renowned. Russian traditions also include folk dances and Orthodox Christian festivals.</p>
-    </section>
-
-    <section>
-      <h2>Climate</h2>
-      <p>Russia’s climate varies greatly, but much of the country has cold winters. Siberia is known for its extremely low temperatures. Summers can be warm, especially in the southern regions.</p>
-    </section>
-
-    <section>
-      <h2>Quick Facts</h2>
-      <table>
-        <tr><th>Capital</th><td>Moscow</td></tr>
-        <tr><th>Official Language</th><td>Russian</td></tr>
-        <tr><th>Population</th><td>143 million (2025)</td></tr>
-        <tr><th>Currency</th><td>Russian Ruble (RUB)</td></tr>
-        <tr><th>President</th><td>Vladimir Putin</td></tr>
-      </table>
-    </section>
+    <button>Climate</button>
+    <div class="panel">
+      <p>Russia has a variety of climates, but much of the country experiences very cold winters. Siberia is known for its extreme cold, while southern regions have milder conditions.</p>
+    </div>
   </div>
+
+  <footer>
+    <a href="index.html" style="color:#ffeb3b; text-decoration:none;">⬅ Back to Homepage</a>
+  </footer>
+
+  <script>
+    // Accordion functionality
+    const acc = document.querySelectorAll(".accordion button");
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
