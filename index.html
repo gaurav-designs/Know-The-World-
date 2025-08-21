@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Know The World</title>
+  <!-- Stylish font for website name -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -20,6 +22,7 @@
       font-size: 3rem;
       color: #ffdd57;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      font-family: 'Orbitron', sans-serif; /* Stylish font */
     }
     .search-container {
       text-align: center;
@@ -34,23 +37,25 @@
       outline: none;
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
-    .marquee {
-      width: 100%;
+    .marquee-container {
+      width: 90%;
+      margin: 20px auto;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      padding: 10px;
       overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      margin: 15px 0;
     }
-    .marquee span {
+    .marquee {
       display: inline-block;
-      padding-left: 100%;
-      animation: marquee 40s linear infinite; /* slower movement */
+      white-space: nowrap;
+      animation: marquee 40s linear infinite;
       font-size: 1.1rem;
-      color: #fff9c4;
+      color: #ffeb3b;
+      font-weight: bold;
     }
     @keyframes marquee {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(-100%, 0); }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
     .grid {
       display: grid;
@@ -61,7 +66,7 @@
       margin: auto;
     }
     .country {
-      display: block; /* whole box clickable */
+      display: block;
       background: linear-gradient(135deg, #ff9966, #ff5e62);
       padding: 20px;
       text-align: center;
@@ -84,12 +89,20 @@
       transform: scale(1.08);
       box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     }
+    .created-by {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive; /* cursive font */
+    }
     footer {
       text-align: center;
       padding: 15px;
       background: rgba(0,0,0,0.4);
       margin-top: 20px;
       font-size: 0.9rem;
+      font-family: 'Pacifico', cursive; /* cursive font */
     }
   </style>
 </head>
@@ -102,10 +115,12 @@
     <input type="text" id="searchBar" placeholder="🔍 Search for a country...">
   </div>
 
-  <div class="marquee">
-    <span>"The world is a book, and those who do not travel read only one page." – St. Augustine 🌎 | 
-    "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert ✈️ | 
-    "A journey of a thousand miles begins with a single step." – Lao Tzu 🚶</span>
+  <div class="marquee-container">
+    <span class="marquee">
+      "The world is a book, and those who do not travel read only one page." – St. Augustine 🌎 | 
+      "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert ✈️ | 
+      "A journey of a thousand miles begins with a single step." – Lao Tzu 🚶
+    </span>
   </div>
 
   <div class="grid" id="countryGrid">
@@ -123,8 +138,10 @@
     <a href="brazil.html" class="country">🇧🇷 Brazil</a>
   </div>
 
+  <div class="created-by">Created By ♥️ Gourav</div>
+
   <footer>
-    © 2025 Know The World | Designed with ❤️
+    © 2025 Know The World | Created By ♥️ Gourav
   </footer>
 
   <script>
@@ -135,11 +152,7 @@
       const query = searchBar.value.toLowerCase();
       countries.forEach(country => {
         const text = country.textContent.toLowerCase();
-        if (text.includes(query)) {
-          country.style.display = "block";
-        } else {
-          country.style.display = "none";
-        }
+        country.style.display = text.includes(query) ? "block" : "none";
       });
     });
   </script>
