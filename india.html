@@ -7,104 +7,123 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
       margin: 0;
       padding: 0;
-      background: #f4f6f9;
       color: #333;
     }
     header {
-      background: linear-gradient(to right, #ff9933, #138808);
-      color: white;
       text-align: center;
       padding: 20px;
-    }
-    header h1 {
-      margin: 0;
+      background: #ff5722;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
     }
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
       padding: 20px;
     }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    section h2 {
-      color: #138808;
-    }
-    table {
+    .accordion {
+      background: #fff;
+      color: #333;
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
+      border: none;
+      outline: none;
       text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-    th {
-      background: #138808;
-      color: white;
+    .accordion:hover {
+      background: #ffcc80;
+      color: #000;
+    }
+    .panel {
+      padding: 0 15px;
+      display: none;
+      background: #f9f9f9;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>India 🇮🇳</h1>
-  </header>
+  <header>🇮🇳 India</header>
 
   <div class="container">
-    <section>
-      <h2>Introduction</h2>
-      <p>India is the seventh-largest country in the world by area and the second-most populous. Known for its cultural diversity and ancient history, India is often called the “land of unity in diversity.” Its capital is New Delhi and its official languages are Hindi and English.</p>
-    </section>
+    <button class="accordion">Geography 🌏</button>
+    <div class="panel">
+      <p>India is the 7th largest country in the world, located in South Asia. It has the Himalayas in the north, fertile plains of the Ganga, deserts of Rajasthan, and long coastlines along the Arabian Sea and Bay of Bengal.</p>
+    </div>
 
-    <section>
-      <h2>Geography</h2>
-      <p>India lies in South Asia, bounded by the Himalayas in the north and the Indian Ocean in the south. It has fertile plains, deserts, mountains, and tropical regions. Major rivers include the Ganges, Yamuna, and Brahmaputra.</p>
-    </section>
+    <button class="accordion">Population 👥</button>
+    <div class="panel">
+      <p>India has a population of over 1.4 billion people, making it one of the most populous countries. It is highly diverse with various religions, languages, and cultures.</p>
+    </div>
 
-    <section>
-      <h2>Population</h2>
-      <p>India’s population is over 1.4 billion, making it one of the most populous nations in the world. People follow multiple religions, with Hinduism, Islam, Christianity, and Sikhism being the most common.</p>
-    </section>
+    <button class="accordion">Government 🏛️</button>
+    <div class="panel">
+      <p>India is the largest democracy in the world. It has a parliamentary system of government with a President as the head of state and a Prime Minister as the head of government.</p>
+    </div>
 
-    <section>
-      <h2>Politics and Government</h2>
-      <p>India is the world’s largest democracy, governed as a federal republic. The President is the ceremonial head of state, while the Prime Minister holds executive power. Currently, the Prime Minister is Narendra Modi.</p>
-    </section>
+    <button class="accordion">Economy 💹</button>
+    <div class="panel">
+      <p>India has a fast-growing economy. It is known for agriculture, information technology, textiles, and services. It is also one of the largest emerging markets in the world.</p>
+    </div>
 
-    <section>
-      <h2>Economy</h2>
-      <p>India has a mixed economy, with major sectors including agriculture, services, and industry. It is a leading producer of IT services, textiles, and pharmaceuticals. The country is also growing rapidly in renewable energy and space technology.</p>
-    </section>
+    <button class="accordion">Agriculture 🌾</button>
+    <div class="panel">
+      <p>Agriculture plays a vital role in India’s economy. The country produces rice, wheat, sugarcane, cotton, and spices in large quantities.</p>
+    </div>
 
-    <section>
-      <h2>Culture</h2>
-      <p>India is known for its diverse traditions, festivals, music, dance, and cuisine. Bollywood (the Hindi film industry) is famous worldwide. Yoga and Ayurveda also originated in India.</p>
-    </section>
+    <button class="accordion">Climate ☀️❄️</button>
+    <div class="panel">
+      <p>India has varied climates ranging from tropical in the south to alpine in the north. The monsoon rains between June and September are important for agriculture.</p>
+    </div>
 
-    <section>
-      <h2>Climate</h2>
-      <p>India has diverse climates—from the snowy Himalayas to the tropical south. The country experiences monsoons, hot summers, and mild winters depending on the region.</p>
-    </section>
-
-    <section>
-      <h2>Quick Facts</h2>
-      <table>
-        <tr><th>Capital</th><td>New Delhi</td></tr>
-        <tr><th>Official Languages</th><td>Hindi & English</td></tr>
-        <tr><th>Population</th><td>1.4+ billion (2025)</td></tr>
-        <tr><th>Currency</th><td>Indian Rupee (INR)</td></tr>
-        <tr><th>Prime Minister</th><td>Narendra Modi</td></tr>
-      </table>
-    </section>
+    <button class="accordion">Culture 🎭</button>
+    <div class="panel">
+      <p>India has one of the world’s oldest and richest cultures. Festivals like Diwali, Holi, and Eid are widely celebrated. Indian classical music, dance, yoga, and cuisine are globally famous.</p>
+    </div>
   </div>
+
+  <footer>
+    © 2025 Know The World | India Page
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.classList.toggle("show");
+      });
+    });
+  </script>
 </body>
 </html>
