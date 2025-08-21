@@ -44,7 +44,7 @@
     .marquee span {
       display: inline-block;
       padding-left: 100%;
-      animation: marquee 20s linear infinite;
+      animation: marquee 40s linear infinite; /* slower movement */
       font-size: 1.1rem;
       color: #fff9c4;
     }
@@ -61,6 +61,7 @@
       margin: auto;
     }
     .country {
+      display: block; /* whole box clickable */
       background: linear-gradient(135deg, #ff9966, #ff5e62);
       padding: 20px;
       text-align: center;
@@ -98,7 +99,7 @@
   </header>
 
   <div class="search-container">
-    <input type="text" placeholder="🔍 Search for a country...">
+    <input type="text" id="searchBar" placeholder="🔍 Search for a country...">
   </div>
 
   <div class="marquee">
@@ -107,7 +108,7 @@
     "A journey of a thousand miles begins with a single step." – Lao Tzu 🚶</span>
   </div>
 
-  <div class="grid">
+  <div class="grid" id="countryGrid">
     <a href="india.html" class="country">🇮🇳 India</a>
     <a href="china.html" class="country">🇨🇳 China</a>
     <a href="russia.html" class="country">🇷🇺 Russia</a>
@@ -123,7 +124,24 @@
   </div>
 
   <footer>
-    © 2025 Know The World | Designed with ❤️
+    © 2025 Know The World | Designed with ❤️ Gourav 
   </footer>
+
+  <script>
+    const searchBar = document.getElementById("searchBar");
+    const countries = document.querySelectorAll(".country");
+
+    searchBar.addEventListener("keyup", function() {
+      const query = searchBar.value.toLowerCase();
+      countries.forEach(country => {
+        const text = country.textContent.toLowerCase();
+        if (text.includes(query)) {
+          country.style.display = "block";
+        } else {
+          country.style.display = "none";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
