@@ -6,98 +6,88 @@
   <title>Know The World</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1920px-World_map_-_low_resolution.svg.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
     }
     header {
-      background: rgba(30, 60, 114, 0.9);
-      color: white;
       text-align: center;
-      padding: 25px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+      padding: 40px 20px 20px;
     }
     header h1 {
       margin: 0;
       font-size: 3rem;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      color: #ffdd57;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
-    .search-box {
-      margin-top: 15px;
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
     }
-    .search-box input {
+    .search-container input {
       width: 60%;
-      padding: 12px;
-      border-radius: 30px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 25px;
       border: none;
       outline: none;
-      font-size: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
-    /* Scrolling slogans */
-    .slogan-bar {
-      background: rgba(255,255,255,0.8);
-      padding: 10px 0;
+    .marquee {
+      width: 100%;
       overflow: hidden;
       white-space: nowrap;
-      border-top: 2px solid #ddd;
-      border-bottom: 2px solid #ddd;
+      box-sizing: border-box;
+      margin: 15px 0;
     }
-    .slogan-text {
+    .marquee span {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll 25s linear infinite;
-      font-style: italic;
+      animation: marquee 20s linear infinite;
       font-size: 1.1rem;
-      color: #1e3c72;
+      color: #fff9c4;
     }
-    @keyframes scroll {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+    @keyframes marquee {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
     }
-    .container {
-      max-width: 900px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
       margin: auto;
+    }
+    .country {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
       padding: 20px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 15px;
-      margin-top: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 12px 0;
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      transition: 0.3s ease;
       text-align: center;
-    }
-    li:hover {
-      transform: scale(1.07);
-      background: #eaf4ff;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-    }
-    a {
-      text-decoration: none;
-      color: #1e3c72;
+      border-radius: 15px;
+      font-size: 1.2rem;
       font-weight: bold;
-      font-size: 1.3rem;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .country:nth-child(2n) {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+    .country:nth-child(3n) {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+    }
+    .country:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     }
     footer {
       text-align: center;
       padding: 15px;
+      background: rgba(0,0,0,0.4);
       margin-top: 20px;
-      background: rgba(30, 60, 114, 0.9);
-      color: white;
       font-size: 0.9rem;
     }
   </style>
@@ -105,63 +95,35 @@
 <body>
   <header>
     <h1>🌍 Know The World</h1>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="🔍 Search for a country...">
-    </div>
   </header>
 
-  <!-- Slogan moving from right to left -->
-  <div class="slogan-bar">
-    <div class="slogan-text">
-      "The world is a book, and those who do not travel read only one page." – Saint Augustine &nbsp; | &nbsp;
-      "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert &nbsp; | &nbsp;
-      "To travel is to live." – Hans Christian Andersen &nbsp; | &nbsp;
-      "Not all those who wander are lost." – J.R.R. Tolkien &nbsp; | &nbsp;
-      "Adventure is worthwhile." – Aesop
-    </div>
+  <div class="search-container">
+    <input type="text" placeholder="🔍 Search for a country...">
   </div>
 
-  <div class="container">
-    <ul id="countryList">
-      <li><a href="india.html">🇮🇳 India</a></li>
-      <li><a href="china.html">🇨🇳 China</a></li>
-      <li><a href="russia.html">🇷🇺 Russia</a></li>
-      <li><a href="japan.html">🇯🇵 Japan</a></li>
-      <li><a href="france.html">🇫🇷 France</a></li>
-      <li><a href="spain.html">🇪🇸 Spain</a></li>
-      <li><a href="usa.html">🇺🇸 United States</a></li>
-      <li><a href="italy.html">🇮🇹 Italy</a></li>
-      <li><a href="turkey.html">🇹🇷 Turkey</a></li>
-      <li><a href="mexico.html">🇲🇽 Mexico</a></li>
-      <li><a href="brazil.html">🇧🇷 Brazil</a></li>
-      <li><a href="germany.html">🇩🇪 Germany</a></li>
-      <li><a href="uk.html">🇬🇧 United Kingdom</a></li>
-      <li><a href="canada.html">🇨🇦 Canada</a></li>
-      <li><a href="australia.html">🇦🇺 Australia</a></li>
-      <li><a href="southafrica.html">🇿🇦 South Africa</a></li>
-      <li><a href="saudiarabia.html">🇸🇦 Saudi Arabia</a></li>
-      <li><a href="argentina.html">🇦🇷 Argentina</a></li>
-      <li><a href="egypt.html">🇪🇬 Egypt</a></li>
-      <li><a href="indonesia.html">🇮🇩 Indonesia</a></li>
-    </ul>
+  <div class="marquee">
+    <span>"The world is a book, and those who do not travel read only one page." – St. Augustine 🌎 | 
+    "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert ✈️ | 
+    "A journey of a thousand miles begins with a single step." – Lao Tzu 🚶</span>
+  </div>
+
+  <div class="grid">
+    <a href="india.html" class="country">🇮🇳 India</a>
+    <a href="china.html" class="country">🇨🇳 China</a>
+    <a href="russia.html" class="country">🇷🇺 Russia</a>
+    <a href="japan.html" class="country">🇯🇵 Japan</a>
+    <a href="france.html" class="country">🇫🇷 France</a>
+    <a href="spain.html" class="country">🇪🇸 Spain</a>
+    <a href="italy.html" class="country">🇮🇹 Italy</a>
+    <a href="turkey.html" class="country">🇹🇷 Turkey</a>
+    <a href="mexico.html" class="country">🇲🇽 Mexico</a>
+    <a href="usa.html" class="country">🇺🇸 USA</a>
+    <a href="germany.html" class="country">🇩🇪 Germany</a>
+    <a href="brazil.html" class="country">🇧🇷 Brazil</a>
   </div>
 
   <footer>
-    🌐 Created with ❤️ by Gaurav | Know The World © 2025
+    © 2025 Know The World | Designed with ❤️
   </footer>
-
-  <script>
-    // Simple search filter for countries
-    const searchInput = document.getElementById("searchInput");
-    const countryList = document.getElementById("countryList").getElementsByTagName("li");
-
-    searchInput.addEventListener("keyup", function() {
-      let filter = searchInput.value.toLowerCase();
-      for (let i = 0; i < countryList.length; i++) {
-        let text = countryList[i].innerText.toLowerCase();
-        countryList[i].style.display = text.includes(filter) ? "" : "none";
-      }
-    });
-  </script>
 </body>
 </html>
