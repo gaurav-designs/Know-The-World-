@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Know The World</title>
-  <!-- Stylish font for website name -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     body {
@@ -22,7 +22,7 @@
       font-size: 3rem;
       color: #ffdd57;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-      font-family: 'Orbitron', sans-serif; /* Stylish font */
+      font-family: 'Orbitron', sans-serif;
     }
     .search-container {
       text-align: center;
@@ -62,7 +62,7 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
       padding: 30px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
     }
     .country {
@@ -78,23 +78,15 @@
       transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .country:nth-child(2n) {
-      background: linear-gradient(135deg, #36d1dc, #5b86e5);
-    }
-    .country:nth-child(3n) {
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      color: #333;
-    }
-    .country:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    }
+    .country:nth-child(2n) { background: linear-gradient(135deg, #36d1dc, #5b86e5); }
+    .country:nth-child(3n) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); color: #333; }
+    .country:hover { transform: scale(1.08); box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
     .created-by {
       text-align: center;
       font-size: 1rem;
       margin-top: 15px;
       color: #ffeb3b;
-      font-family: 'Pacifico', cursive; /* cursive font */
+      font-family: 'Pacifico', cursive;
     }
     footer {
       text-align: center;
@@ -102,7 +94,7 @@
       background: rgba(0,0,0,0.4);
       margin-top: 20px;
       font-size: 0.9rem;
-      font-family: 'Pacifico', cursive; /* cursive font */
+      font-family: 'Pacifico', cursive;
     }
   </style>
 </head>
@@ -124,18 +116,58 @@
   </div>
 
   <div class="grid" id="countryGrid">
-    <a href="india.html" class="country">🇮🇳 India</a>
-    <a href="china.html" class="country">🇨🇳 China</a>
-    <a href="russia.html" class="country">🇷🇺 Russia</a>
-    <a href="japan.html" class="country">🇯🇵 Japan</a>
-    <a href="france.html" class="country">🇫🇷 France</a>
-    <a href="spain.html" class="country">🇪🇸 Spain</a>
-    <a href="italy.html" class="country">🇮🇹 Italy</a>
-    <a href="turkey.html" class="country">🇹🇷 Turkey</a>
-    <a href="mexico.html" class="country">🇲🇽 Mexico</a>
-    <a href="usa.html" class="country">🇺🇸 USA</a>
-    <a href="germany.html" class="country">🇩🇪 Germany</a>
+    <a href="argentina.html" class="country">🇦🇷 Argentina</a>
+    <a href="australia.html" class="country">🇦🇺 Australia</a>
+    <a href="austria.html" class="country">🇦🇹 Austria</a>
+    <a href="bangladesh.html" class="country">🇧🇩 Bangladesh</a>
+    <a href="belgium.html" class="country">🇧🇪 Belgium</a>
     <a href="brazil.html" class="country">🇧🇷 Brazil</a>
+    <a href="canada.html" class="country">🇨🇦 Canada</a>
+    <a href="czechrepublic.html" class="country">🇨🇿 Czech Republic</a>
+    <a href="china.html" class="country">🇨🇳 China</a>
+    <a href="denmark.html" class="country">🇩🇰 Denmark</a>
+    <a href="egypt.html" class="country">🇪🇬 Egypt</a>
+    <a href="ethiopia.html" class="country">🇪🇹 Ethiopia</a>
+    <a href="finland.html" class="country">🇫🇮 Finland</a>
+    <a href="france.html" class="country">🇫🇷 France</a>
+    <a href="germany.html" class="country">🇩🇪 Germany</a>
+    <a href="greece.html" class="country">🇬🇷 Greece</a>
+    <a href="hungary.html" class="country">🇭🇺 Hungary</a>
+    <a href="india.html" class="country">🇮🇳 India</a>
+    <a href="indonesia.html" class="country">🇮🇩 Indonesia</a>
+    <a href="iran.html" class="country">🇮🇷 Iran</a>
+    <a href="iraq.html" class="country">🇮🇶 Iraq</a>
+    <a href="israel.html" class="country">🇮🇱 Israel</a>
+    <a href="italy.html" class="country">🇮🇹 Italy</a>
+    <a href="japan.html" class="country">🇯🇵 Japan</a>
+    <a href="kenya.html" class="country">🇰🇪 Kenya</a>
+    <a href="southkorea.html" class="country">🇰🇷 South Korea</a>
+    <a href="mexico.html" class="country">🇲🇽 Mexico</a>
+    <a href="malaysia.html" class="country">🇲🇾 Malaysia</a>
+    <a href="morocco.html" class="country">🇲🇦 Morocco</a>
+    <a href="netherlands.html" class="country">🇳🇱 Netherlands</a>
+    <a href="newzealand.html" class="country">🇳🇿 New Zealand</a>
+    <a href="nepal.html" class="country">🇳🇵 Nepal</a>
+    <a href="nigeria.html" class="country">🇳🇬 Nigeria</a>
+    <a href="norway.html" class="country">🇳🇴 Norway</a>
+    <a href="pakistan.html" class="country">🇵🇰 Pakistan</a>
+    <a href="philippines.html" class="country">🇵🇭 Philippines</a>
+    <a href="poland.html" class="country">🇵🇱 Poland</a>
+    <a href="portugal.html" class="country">🇵🇹 Portugal</a>
+    <a href="russia.html" class="country">🇷🇺 Russia</a>
+    <a href="saudiarabia.html" class="country">🇸🇦 Saudi Arabia</a>
+    <a href="singapore.html" class="country">🇸🇬 Singapore</a>
+    <a href="southafrica.html" class="country">🇿🇦 South Africa</a>
+    <a href="spain.html" class="country">🇪🇸 Spain</a>
+    <a href="srilanka.html" class="country">🇱🇰 Sri Lanka</a>
+    <a href="sweden.html" class="country">🇸🇪 Sweden</a>
+    <a href="switzerland.html" class="country">🇨🇭 Switzerland</a>
+    <a href="thailand.html" class="country">🇹🇭 Thailand</a>
+    <a href="turkey.html" class="country">🇹🇷 Turkey</a>
+    <a href="uk.html" class="country">🇬🇧 United Kingdom</a>
+    <a href="usa.html" class="country">🇺🇸 USA</a>
+    <a href="ukraine.html" class="country">🇺🇦 Ukraine</a>
+    <a href="vietnam.html" class="country">🇻🇳 Vietnam</a>
   </div>
 
   <div class="created-by">Created By ♥️ Gourav</div>
