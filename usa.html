@@ -7,67 +7,115 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9fcff;
       margin: 0;
-      padding: 0;
-      color: #222;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
     }
     header {
-      background: #3c3b6e;
-      color: white;
-      padding: 20px;
       text-align: center;
+      padding: 30px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      background: rgba(0,0,0,0.3);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .accordion {
+      width: 90%;
+      margin: 20px auto;
     }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      margin-top: 20px;
+    .accordion button {
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
-    h2 {
-      color: #b22234;
+    .accordion button:hover {
+      background-color: #90ee90;
     }
-    p {
-      line-height: 1.6;
+    .accordion button.active {
+      background-color: #4caf50;
+      color: #fff;
+    }
+    .accordion .panel {
+      padding: 0 15px;
+      background: rgba(255,255,255,0.9);
+      color: #000;
+      display: none;
+      overflow: hidden;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 15px;
+    }
+    .accordion .panel p {
+      padding: 15px;
     }
     footer {
-      background: #3c3b6e;
-      color: white;
       text-align: center;
-      padding: 12px;
-      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🇺🇸 United States of America</h1>
-  </header>
-  <div class="container">
-    <h2>Overview</h2>
-    <p>The United States of America is the third largest country in the world by area and population. It is known for its diversity, innovation, and global influence.</p>
+  <header>🇺🇸 United States of America - Know The World</header>
 
-    <h2>Government</h2>
-    <p>The USA is a federal republic with a presidential system. The President is both the head of state and government.</p>
+  <div class="accordion">
+    <button>Geography</button>
+    <div class="panel">
+      <p>The United States is the third-largest country in the world by area, located in North America. It has diverse landscapes including mountains, plains, deserts, and coastlines along the Atlantic and Pacific Oceans.</p>
+    </div>
 
-    <h2>Population</h2>
-    <p>The United States has a population of over 330 million people. Major cities include New York City, Los Angeles, and Chicago.</p>
+    <button>Population</button>
+    <div class="panel">
+      <p>The USA has a population of about 333 million people. Major cities include New York, Los Angeles, Chicago, and Houston. The country is known for its cultural diversity.</p>
+    </div>
 
-    <h2>Economy</h2>
-    <p>The USA has the world’s largest economy, driven by technology, finance, industry, and agriculture. It is also the leading global hub for innovation and research.</p>
+    <button>Government</button>
+    <div class="panel">
+      <p>The United States is a federal democratic republic. It has three branches of government: executive, legislative, and judicial. The President serves as both head of state and government.</p>
+    </div>
 
-    <h2>Climate & Agriculture</h2>
-    <p>The United States has varied climates — from cold in Alaska to tropical in Hawaii and Florida. Major crops include corn, soybeans, wheat, and cotton.</p>
+    <button>Economy</button>
+    <div class="panel">
+      <p>The USA has the world’s largest economy, driven by industries such as technology, finance, healthcare, manufacturing, and entertainment. It is also a leader in innovation and trade.</p>
+    </div>
+
+    <button>Culture</button>
+    <div class="panel">
+      <p>American culture is globally influential, with Hollywood films, music, sports, and fashion. It is known for values of freedom, entrepreneurship, and diversity.</p>
+    </div>
+
+    <button>Climate</button>
+    <div class="panel">
+      <p>The USA has a wide range of climates, from arctic in Alaska to tropical in Hawaii and Florida. Most regions experience four seasons, though weather varies greatly by state.</p>
+    </div>
   </div>
+
   <footer>
-    © 2025 Know The World | United States
+    <a href="index.html" style="color:#ffeb3b; text-decoration:none;">⬅ Back to Homepage</a>
   </footer>
+
+  <script>
+    // Accordion functionality
+    const acc = document.querySelectorAll(".accordion button");
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
