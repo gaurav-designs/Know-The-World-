@@ -6,50 +6,53 @@
   <title>Know The World</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f0f8ff;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1920px-World_map_-_low_resolution.svg.png') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
     header {
-      background: linear-gradient(to right, #1e3c72, #2a5298);
+      background: rgba(30, 60, 114, 0.9);
       color: white;
       text-align: center;
       padding: 25px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
     }
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
+      font-size: 3rem;
       letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
     .search-box {
       margin-top: 15px;
     }
     .search-box input {
       width: 60%;
-      padding: 10px;
-      border-radius: 20px;
+      padding: 12px;
+      border-radius: 30px;
       border: none;
       outline: none;
       font-size: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     /* Scrolling slogans */
     .slogan-bar {
-      background: #e6e6e6;
+      background: rgba(255,255,255,0.8);
       padding: 10px 0;
       overflow: hidden;
       white-space: nowrap;
-      box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1);
+      border-top: 2px solid #ddd;
+      border-bottom: 2px solid #ddd;
     }
     .slogan-text {
       display: inline-block;
       padding-left: 100%;
-      animation: scroll 20s linear infinite;
+      animation: scroll 25s linear infinite;
       font-style: italic;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #1e3c72;
     }
     @keyframes scroll {
@@ -57,9 +60,13 @@
       100% { transform: translateX(-100%); }
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 20px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     ul {
       list-style: none;
@@ -71,18 +78,27 @@
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      transition: 0.3s ease;
       text-align: center;
     }
     li:hover {
-      transform: scale(1.05);
-      background: #f9f9f9;
+      transform: scale(1.07);
+      background: #eaf4ff;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     }
     a {
       text-decoration: none;
       color: #1e3c72;
       font-weight: bold;
       font-size: 1.3rem;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(30, 60, 114, 0.9);
+      color: white;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -97,9 +113,11 @@
   <!-- Slogan moving from right to left -->
   <div class="slogan-bar">
     <div class="slogan-text">
-      "The world is a book, and those who do not travel read only one page." – Saint Augustine &nbsp;&nbsp; | &nbsp;&nbsp;
-      "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert &nbsp;&nbsp; | &nbsp;&nbsp;
-      "To travel is to live." – Hans Christian Andersen
+      "The world is a book, and those who do not travel read only one page." – Saint Augustine &nbsp; | &nbsp;
+      "Travel makes one modest, you see what a tiny place you occupy in the world." – Gustave Flaubert &nbsp; | &nbsp;
+      "To travel is to live." – Hans Christian Andersen &nbsp; | &nbsp;
+      "Not all those who wander are lost." – J.R.R. Tolkien &nbsp; | &nbsp;
+      "Adventure is worthwhile." – Aesop
     </div>
   </div>
 
@@ -115,8 +133,22 @@
       <li><a href="italy.html">🇮🇹 Italy</a></li>
       <li><a href="turkey.html">🇹🇷 Turkey</a></li>
       <li><a href="mexico.html">🇲🇽 Mexico</a></li>
+      <li><a href="brazil.html">🇧🇷 Brazil</a></li>
+      <li><a href="germany.html">🇩🇪 Germany</a></li>
+      <li><a href="uk.html">🇬🇧 United Kingdom</a></li>
+      <li><a href="canada.html">🇨🇦 Canada</a></li>
+      <li><a href="australia.html">🇦🇺 Australia</a></li>
+      <li><a href="southafrica.html">🇿🇦 South Africa</a></li>
+      <li><a href="saudiarabia.html">🇸🇦 Saudi Arabia</a></li>
+      <li><a href="argentina.html">🇦🇷 Argentina</a></li>
+      <li><a href="egypt.html">🇪🇬 Egypt</a></li>
+      <li><a href="indonesia.html">🇮🇩 Indonesia</a></li>
     </ul>
   </div>
+
+  <footer>
+    🌐 Created with ❤️ by Gaurav | Know The World © 2025
+  </footer>
 
   <script>
     // Simple search filter for countries
