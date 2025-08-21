@@ -1,130 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Know The World</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Know The World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #70e1f5, #ffd194);
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-            padding: 40px 20px;
-        }
+    header {
+      padding: 30px;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+      color: #ffcc00;
+      text-shadow: 2px 2px 8px black;
+    }
 
-        header {
-            font-size: 3rem;
-            font-weight: 600;
-            color: #2c3e50;
-            text-shadow: 2px 2px #f39c12;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
+    .countries {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
 
-        .search-container {
-            width: 100%;
-            max-width: 500px;
-            margin-bottom: 40px;
-        }
+    .country-card {
+      background: white;
+      color: black;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s, background 0.3s;
+    }
 
-        .search-container input[type="text"] {
-            width: 100%;
-            padding: 15px 20px;
-            border-radius: 40px;
-            border: none;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            outline: none;
-            transition: box-shadow 0.3s ease;
-        }
+    .country-card:hover {
+      transform: scale(1.08);
+      background: #f0f0f0;
+    }
 
-        .search-container input[type="text"]:focus {
-            box-shadow: 0 6px 15px rgba(243,156,18,0.8);
-        }
+    .country-card h3 {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
 
-        .country-folders {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        .folder {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            width: 130px;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            text-decoration: none;
-            color: #333;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .folder:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(243,156,18,0.6);
-        }
-
-        .folder img.flag {
-            width: 80px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 7px rgba(0,0,0,0.1);
-        }
-
-        .folder .country-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-align: center;
-        }
-    </style>
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
 
-    <header>Know The World</header>
+  <header>🌍 KNOW THE WORLD 🌍</header>
 
-    <div class="search-container">
-        <input type="text" placeholder="Search for a country..." />
-    </div>
+  <div class="countries">
+    <a href="India/index.html">
+      <div class="country-card">
+        <h3>🇮🇳 India</h3>
+      </div>
+    </a>
 
-    <div class="country-folders">
-        <a href="#" class="folder">
-            <img class="flag" src="https://flagcdn.com/w320/us.png" alt="United States Flag" />
-            <div class="country-name">United States</div>
-        </a>
-        <a href="#" class="folder">
-            <img class="flag" src="https://flagcdn.com/w320/in.png" alt="India Flag" />
-            <div class="country-name">India</div>
-        </a>
-        <a href="#" class="folder">
-            <img class="flag" src="https://flagcdn.com/w320/fr.png" alt="France Flag" />
-            <div class="country-name">France</div>
-        </a>
-        <a href="#" class="folder">
-            <img class="flag" src="https://flagcdn.com/w320/jp.png" alt="Japan Flag" />
-            <div class="country-name">Japan</div>
-        </a>
-        <a href="#" class="folder">
-            <img class="flag" src="https://flagcdn.com/w320/au.png" alt="Australia Flag" />
-            <div class="country-name">Australia</div>
-        </a>
-    </div>
+    <a href="China/index.html">
+      <div class="country-card">
+        <h3>🇨🇳 China</h3>
+      </div>
+    </a>
+
+    <a href="Russia/index.html">
+      <div class="country-card">
+        <h3>🇷🇺 Russia</h3>
+      </div>
+    </a>
+
+    <a href="Japan/index.html">
+      <div class="country-card">
+        <h3>🇯🇵 Japan</h3>
+      </div>
+    </a>
+
+    <a href="France/index.html">
+      <div class="country-card">
+        <h3>🇫🇷 France</h3>
+      </div>
+    </a>
+
+    <a href="Spain/index.html">
+      <div class="country-card">
+        <h3>🇪🇸 Spain</h3>
+      </div>
+    </a>
+
+    <a href="UnitedStates/index.html">
+      <div class="country-card">
+        <h3>🇺🇸 United States</h3>
+      </div>
+    </a>
+
+    <a href="Italy/index.html">
+      <div class="country-card">
+        <h3>🇮🇹 Italy</h3>
+      </div>
+    </a>
+
+    <a href="Turkey/index.html">
+      <div class="country-card">
+        <h3>🇹🇷 Turkey</h3>
+      </div>
+    </a>
+
+    <a href="Mexico/index.html">
+      <div class="country-card">
+        <h3>🇲🇽 Mexico</h3>
+      </div>
+    </a>
+  </div>
 
 </body>
-</html>
+            </html>
