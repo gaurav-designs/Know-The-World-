@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>China - Know The World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #ff4e50;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .accordion {
+      background: #fff;
+      color: #333;
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .accordion:hover {
+      background: #ff9a9e;
+      color: #000;
+    }
+    .panel {
+      padding: 0 15px;
+      display: none;
+      background: #f9f9f9;
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>🇨🇳 China</header>
+
+  <div class="container">
+    <button class="accordion">Geography 🌏</button>
+    <div class="panel">
+      <p>China is the 4th largest country in the world, covering around 9.6 million square kilometers. It has diverse landscapes, including mountains, deserts, plateaus, and fertile river basins like the Yangtze and Yellow River.</p>
+    </div>
+
+    <button class="accordion">Population 👥</button>
+    <div class="panel">
+      <p>China is the world’s most populous country with more than 1.4 billion people. It has a mixture of 56 recognized ethnic groups, with the Han Chinese making up over 90% of the population.</p>
+    </div>
+
+    <button class="accordion">Government 🏛️</button>
+    <div class="panel">
+      <p>China has a single-party system led by the Communist Party of China (CPC). It is officially known as the People’s Republic of China (PRC), with Beijing as its capital.</p>
+    </div>
+
+    <button class="accordion">Economy 💹</button>
+    <div class="panel">
+      <p>China has the second-largest economy in the world, driven by manufacturing, exports, and technology. It is often referred to as the "world's factory" due to its massive production capacity.</p>
+    </div>
+
+    <button class="accordion">Agriculture 🌾</button>
+    <div class="panel">
+      <p>China is one of the world’s largest producers of rice, wheat, corn, tea, and pork. Agriculture remains a vital sector, especially in rural areas.</p>
+    </div>
+
+    <button class="accordion">Climate ☀️❄️</button>
+    <div class="panel">
+      <p>China has diverse climates, ranging from tropical in the south to subarctic in the north. Summers are hot and humid in the east, while winters can be freezing in the north and west.</p>
+    </div>
+
+    <button class="accordion">Culture 🎎</button>
+    <div class="panel">
+      <p>China has a rich cultural heritage, including festivals like Chinese New Year and the Mid-Autumn Festival. Contributions such as calligraphy, martial arts, Confucianism, and inventions like paper and gunpowder are world-famous.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Know The World | China Page
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.classList.toggle("show");
+      });
+    });
+  </script>
+</body>
+    </html>
