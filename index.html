@@ -1,124 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Know The World</title>
+  <title>Know The World - Homepage</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #1c1c84, #2a9df4);
       color: white;
+      padding: 20px;
       text-align: center;
     }
-
-    header {
-      padding: 30px;
-      font-size: 3rem;
-      font-weight: bold;
-      font-family: "Georgia", serif;
-      color: #ffcc00;
-      text-shadow: 2px 2px 8px black;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
     .countries {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      padding: 30px;
     }
-
-    .country-card {
+    .country {
       background: white;
-      color: black;
-      border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s, background 0.3s;
-    }
-
-    .country-card:hover {
-      transform: scale(1.08);
-      background: #f0f0f0;
-    }
-
-    .country-card h3 {
-      margin: 10px 0 0;
+      border-radius: 10px;
+      text-align: center;
       font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-
+    .country:hover {
+      transform: translateY(-5px);
+      background: #eaf4ff;
+    }
     a {
       text-decoration: none;
-      color: inherit;
+      color: #1c1c84;
     }
   </style>
 </head>
 <body>
-
-  <header>🌍 KNOW THE WORLD 🌍</header>
-
-  <div class="countries">
-    <a href="India/index.html">
-      <div class="country-card">
-        <h3>🇮🇳 India</h3>
-      </div>
-    </a>
-
-    <a href="China/index.html">
-      <div class="country-card">
-        <h3>🇨🇳 China</h3>
-      </div>
-    </a>
-
-    <a href="Russia/index.html">
-      <div class="country-card">
-        <h3>🇷🇺 Russia</h3>
-      </div>
-    </a>
-
-    <a href="Japan/index.html">
-      <div class="country-card">
-        <h3>🇯🇵 Japan</h3>
-      </div>
-    </a>
-
-    <a href="France/index.html">
-      <div class="country-card">
-        <h3>🇫🇷 France</h3>
-      </div>
-    </a>
-
-    <a href="Spain/index.html">
-      <div class="country-card">
-        <h3>🇪🇸 Spain</h3>
-      </div>
-    </a>
-
-    <a href="UnitedStates/index.html">
-      <div class="country-card">
-        <h3>🇺🇸 United States</h3>
-      </div>
-    </a>
-
-    <a href="Italy/index.html">
-      <div class="country-card">
-        <h3>🇮🇹 Italy</h3>
-      </div>
-    </a>
-
-    <a href="Turkey/index.html">
-      <div class="country-card">
-        <h3>🇹🇷 Turkey</h3>
-      </div>
-    </a>
-
-    <a href="Mexico/index.html">
-      <div class="country-card">
-        <h3>🇲🇽 Mexico</h3>
-      </div>
-    </a>
+  <header>
+    <h1>Know The World 🌍</h1>
+    <p>Explore information about different countries</p>
+  </header>  <div class="container">
+    <div class="countries">
+      <div class="country"><a href="india.html">🇮🇳 India</a></div>
+      <div class="country"><a href="china.html">🇨🇳 China</a></div>
+      <div class="country"><a href="russia.html">🇷🇺 Russia</a></div>
+      <div class="country"><a href="japan.html">🇯🇵 Japan</a></div>
+      <div class="country"><a href="france.html">🇫🇷 France</a></div>
+      <div class="country"><a href="spain.html">🇪🇸 Spain</a></div>
+      <div class="country"><a href="usa.html">🇺🇸 United States</a></div>
+      <div class="country"><a href="italy.html">🇮🇹 Italy</a></div>
+      <div class="country"><a href="turkey.html">🇹🇷 Turkey</a></div>
+      <div class="country"><a href="mexico.html">🇲🇽 Mexico</a></div>
+    </div>
   </div>
-
 </body>
-            </html>
+</html>
