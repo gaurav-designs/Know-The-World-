@@ -3,118 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>United States - Know The World</title>
+  <title>USA - Know The World</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
       margin: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 0;
       color: #fff;
     }
     header {
       text-align: center;
-      padding: 30px;
-      font-size: 2.2rem;
+      padding: 20px;
+      background: linear-gradient(to right, #b22234, #ffffff, #3c3b6e); /* USA flag colors */
+      color: #000;
+      font-size: 2rem;
       font-weight: bold;
-      background: rgba(0,0,0,0.3);
+      border-radius: 0 0 10px 10px;
+    }
+    .capital {
+      font-size: 1rem;
+      color: #000;
+      margin-top: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .back-button {
+      display: none;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      background: #ffdd57;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
     }
     .accordion {
-      width: 90%;
-      margin: 20px auto;
-    }
-    .accordion button {
-      background-color: #fff;
-      color: #333;
       cursor: pointer;
       padding: 15px;
+      margin: 10px 0;
       width: 100%;
       border: none;
+      outline: none;
       text-align: left;
       font-size: 1.2rem;
+      font-weight: bold;
       border-radius: 8px;
-      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: 0.3s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    .accordion button:hover {
-      background-color: #90ee90;
-    }
-    .accordion button.active {
-      background-color: #4caf50;
       color: #fff;
     }
-    .accordion .panel {
-      padding: 0 15px;
-      background: rgba(255,255,255,0.9);
-      color: #000;
-      display: none;
-      overflow: hidden;
-      border-radius: 0 0 8px 8px;
-      margin-bottom: 15px;
+    .accordion:nth-child(odd) {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
     }
-    .accordion .panel p {
+    .accordion:nth-child(even) {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+    .accordion:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .panel {
       padding: 15px;
+      display: none;
+      background: rgba(0,0,0,0.3);
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .created-by {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive;
     }
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      margin-top: 20px;
       background: rgba(0,0,0,0.4);
-      margin-top: 40px;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <header>🇺🇸 United States of America - Know The World</header>
+  <header>
+    🇺🇸 United States of America
+    <div class="capital">Capital: Washington, D.C.</div>
+  </header>
 
-  <div class="accordion">
-    <button>Geography</button>
+  <div class="container">
+    <a href="#" class="back-button" id="backBtn">⬅️ Back to Topics</a>
+
+    <!-- Geography -->
+    <button class="accordion">Geography 🌏</button>
     <div class="panel">
-      <p>The United States is the third-largest country in the world by area, located in North America. It has diverse landscapes including mountains, plains, deserts, and coastlines along the Atlantic and Pacific Oceans.</p>
+      <p>The United States spans approximately 9.8 million square kilometers with diverse landscapes including mountains, plains, deserts, and extensive coastlines. Major rivers like the Mississippi, Missouri, and Colorado support agriculture and transport. Geographic diversity influences climate, ecosystems, urbanization, and economic activity. The country has rich natural resources like coal, oil, and timber. Coastal and interior regions experience distinct climates, from arctic Alaska to tropical Florida and Hawaii. Geography has historically shaped trade routes, settlement patterns, and defense strategies.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button>Population</button>
+    <!-- Population -->
+    <button class="accordion">Population 👥</button>
     <div class="panel">
-      <p>The USA has a population of about 333 million people. Major cities include New York, Los Angeles, Chicago, and Houston. The country is known for its cultural diversity.</p>
+      <p>The U.S. has a population of over 335 million people. It is highly diverse ethnically and culturally, with major groups including Whites, African Americans, Hispanics, Asians, and Native Americans. Immigration shapes demographics, urbanization, and culture. Population is dense in the Northeast, West Coast, and urban centers, while rural areas are sparsely populated. Youthful demographics, migration trends, and aging populations influence economic policies, healthcare, education, and urban planning. Cultural diversity contributes to festivals, cuisine, arts, and traditions.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button>Government</button>
+    <!-- Government -->
+    <button class="accordion">Government 🏛️</button>
     <div class="panel">
-      <p>The United States is a federal democratic republic. It has three branches of government: executive, legislative, and judicial. The President serves as both head of state and government.</p>
+      <p>The U.S. is a federal republic with a presidential system. The President is head of state and government. Congress consists of the House of Representatives and the Senate. There are 50 states, each with its own government. The judiciary is independent, led by the Supreme Court. Democratic principles ensure free elections, civil liberties, and separation of powers. Major political parties include Democrats and Republicans. Governance focuses on defense, economy, healthcare, education, infrastructure, and foreign policy.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button>Economy</button>
+    <!-- Economy -->
+    <button class="accordion">Economy 💹</button>
     <div class="panel">
-      <p>The USA has the world’s largest economy, driven by industries such as technology, finance, healthcare, manufacturing, and entertainment. It is also a leader in innovation and trade.</p>
+      <p>The United States has the world’s largest economy, driven by technology, services, manufacturing, and agriculture. Key industries include IT, aerospace, finance, automobiles, and electronics. Agriculture produces corn, wheat, soybeans, cotton, and livestock. Trade, investment, and innovation support growth. Challenges include income inequality, debt, and regional disparities. Government initiatives promote entrepreneurship, technological advancement, and sustainability. Economic development impacts employment, urbanization, social mobility, and global influence.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button>Culture</button>
+    <!-- Agriculture -->
+    <button class="accordion">Agriculture 🌾</button>
     <div class="panel">
-      <p>American culture is globally influential, with Hollywood films, music, sports, and fashion. It is known for values of freedom, entrepreneurship, and diversity.</p>
+      <p>Agriculture contributes significantly to the U.S. economy. Major crops include corn, wheat, soybeans, rice, and fruits. Livestock farming provides meat, dairy, and poultry. Advanced technology, irrigation, mechanization, and biotechnology improve yields. Different regions specialize in certain crops: Midwest for grains, California for fruits and vegetables, and the South for cotton and rice. Agriculture supports rural communities, exports, and food security. Challenges include climate change, soil management, and water resources. Sustainable practices and organic farming are increasingly emphasized.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button>Climate</button>
+    <!-- Culture -->
+    <button class="accordion">Culture 🎎</button>
     <div class="panel">
-      <p>The USA has a wide range of climates, from arctic in Alaska to tropical in Hawaii and Florida. Most regions experience four seasons, though weather varies greatly by state.</p>
+      <p>American culture is diverse due to immigration and regional traditions. Literature, music, film, and art have worldwide influence. Festivals include Independence Day, Thanksgiving, Christmas, and Halloween. Sports, cinema, and education are integral to society. Regional food, language, and customs reflect ethnic diversity. Cultural identity emphasizes freedom, innovation, and individualism, shaping lifestyle, education, business, and international image.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
+
+    <!-- Climate -->
+    <button class="accordion">Climate ☀️❄️</button>
+    <div class="panel">
+      <p>The U.S. has varied climates: arctic in Alaska, tropical in Florida and Hawaii, continental in the interior, Mediterranean in California, and humid subtropical in the South. Winters are cold in the North, mild in the South; summers can be hot and humid. Extreme events include hurricanes, tornadoes, floods, and droughts. Climate influences agriculture, water resources, energy, and infrastructure. Policies include adaptation, disaster management, and sustainable practices.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Military -->
+    <button class="accordion">Military 🪖</button>
+    <div class="panel">
+      <p>The United States has the world’s strongest military, including the Army, Navy, Air Force, Marine Corps, and Space Force. It maintains advanced technology, nuclear capabilities, aircraft carriers, and strategic defense systems. Responsibilities include national defense, international peacekeeping, disaster relief, and cybersecurity. Military policies focus on modernization, innovation, and global strategic presence. Forces also support diplomacy, scientific research, and emergency response. The military ensures sovereignty, stability, and global influence.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
   </div>
 
   <footer>
-    <a href="index.html" style="color:#ffeb3b; text-decoration:none;">⬅ Back to Homepage</a>
+    © 2025 Know The World | USA Page
   </footer>
 
   <script>
-    // Accordion functionality
-    const acc = document.querySelectorAll(".accordion button");
+    const acc = document.querySelectorAll(".accordion");
+    const backBtn = document.getElementById("backBtn");
+
     acc.forEach(button => {
       button.addEventListener("click", function() {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
+        const panel = this.nextElementSibling;
+        const isVisible = panel.classList.contains("show");
+
+        // Hide all panels first
+        document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+
+        if (!isVisible) {
+          panel.classList.add("show");
+          backBtn.style.display = "inline-block";
+          window.scrollTo({ top: panel.offsetTop - 20, behavior: 'smooth' });
         } else {
-          panel.style.display = "block";
+          backBtn.style.display = "none";
         }
       });
+    });
+
+    backBtn.addEventListener("click", () => {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+      backBtn.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
