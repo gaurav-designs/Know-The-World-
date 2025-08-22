@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argentina - Know The World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #74acdf, #ffffff, #d52b1e); /* Argentina flag colors */
+      color: #000;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 0 0 10px 10px;
+    }
+    .capital {
+      font-size: 1rem;
+      color: #000;
+      margin-top: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .back-button {
+      display: none;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      background: #ffdd57;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .accordion {
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      color: #fff;
+    }
+    .accordion:nth-child(odd) {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    .accordion:nth-child(even) {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+    .accordion:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .panel {
+      padding: 15px;
+      display: none;
+      background: rgba(0,0,0,0.3);
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .created-by {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🇦🇷 Argentina
+    <div class="capital">Capital: Buenos Aires</div>
+  </header>
+
+  <div class="container">
+    <a href="#" class="back-button" id="backBtn">⬅️ Back to Topics</a>
+
+    <!-- Geography -->
+    <button class="accordion">Geography 🌏</button>
+    <div class="panel">
+      <p>Argentina is the second-largest country in South America, spanning approximately 2.78 million square kilometers. It features diverse geography, including the Andes mountains in the west, the Pampas plains in the center, Patagonia in the south, and subtropical forests in the northeast. Major rivers such as the Paraná, Uruguay, and Colorado are vital for irrigation, hydroelectricity, and trade. Argentina has extensive coastlines along the Atlantic Ocean. This geographic diversity creates varied climates ranging from arid in Patagonia, humid subtropical in the north, to temperate in the central plains. Argentina’s landscapes support a wide variety of flora and fauna, and have historically influenced agriculture, settlement patterns, and economic activity. The Andes provide mineral wealth, tourism opportunities, and influence climate and water systems across the country.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Population -->
+    <button class="accordion">Population 👥</button>
+    <div class="panel">
+      <p>Argentina has a population of approximately 45 million people, with a rich ethnic mix influenced by European immigration, indigenous peoples, and smaller groups from neighboring countries. The population is concentrated in urban areas, especially Buenos Aires, Córdoba, and Rosario, while the Patagonian region remains sparsely populated. Spanish is the official language, and the culture reflects European, indigenous, and mestizo heritage. Argentina has a relatively young population with increasing urbanization, which creates economic opportunities and challenges in healthcare, housing, education, and employment. Population diversity contributes to regional festivals, cuisine, arts, and social life. Migration trends, both internal and international, have influenced culture, labor markets, and demographic growth patterns.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Government -->
+    <button class="accordion">Government 🏛️</button>
+    <div class="panel">
+      <p>Argentina is a federal republic with a presidential system. The President serves as both head of state and government. The legislative branch includes a bicameral Congress with the Senate and Chamber of Deputies. Argentina has 23 provinces and one autonomous city, Buenos Aires, each with its own government. The judiciary is independent, with the Supreme Court as the highest authority. Democracy ensures free elections, civil liberties, and separation of powers. Major political parties include the Justicialist Party and Radical Civic Union. Government policies focus on economic development, social welfare, education, healthcare, infrastructure, and foreign relations, ensuring national unity and stability while balancing provincial interests.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Economy -->
+    <button class="accordion">Economy 💹</button>
+    <div class="panel">
+      <p>Argentina has a mixed economy, combining agriculture, industry, and services. Agriculture is crucial, producing soybeans, wheat, maize, beef, and wine. The industrial sector includes automotive, food processing, chemicals, and energy production. Services, especially finance, tourism, and information technology, drive growth. Argentina is rich in natural resources such as oil, gas, and minerals. Economic challenges include inflation, debt, and regional disparities. Government initiatives aim to promote exports, investment, and technological development. The economy is influenced by trade relations, currency stability, and policy reforms that affect employment, urbanization, and social welfare.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Agriculture -->
+    <button class="accordion">Agriculture 🌾</button>
+    <div class="panel">
+      <p>Agriculture is central to Argentina’s economy. Fertile Pampas plains produce grains like wheat, corn, and soybeans. Livestock farming, especially cattle, supports beef production, dairy, and leather industries. Vineyards in Mendoza produce world-class wine. Modern farming techniques, irrigation, mechanization, and biotechnology enhance productivity. Agriculture faces challenges including climate variability, soil degradation, and water management. Government policies encourage sustainable farming, export promotion, and rural development. Agriculture shapes Argentina’s culture, cuisine, and regional economies, making it a vital pillar of national growth and employment.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Culture -->
+    <button class="accordion">Culture 🎎</button>
+    <div class="panel">
+      <p>Argentina’s culture blends European, indigenous, and African influences. Literature, music, dance, and visual arts reflect this diversity. Tango, originated in Buenos Aires, is world-famous. Folk dances and music are celebrated in different provinces. Festivals include Carnival, Independence Day, and national holidays honoring cultural traditions. Argentine cuisine features beef, empanadas, mate, and wine. Education, sports, theater, and cinema contribute to cultural identity. Regional diversity shapes customs, language dialects, and art forms. Cultural preservation and promotion enhance tourism and international recognition of Argentina’s heritage.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Climate -->
+    <button class="accordion">Climate ☀️❄️</button>
+    <div class="panel">
+      <p>Argentina has diverse climates due to its size and geography. Northern areas have subtropical climates with hot summers and mild winters. Central regions have temperate climates, while Patagonia in the south is cold and arid. Coastal areas experience mild maritime influence. Extreme weather events include droughts, floods, and occasional snowstorms in southern provinces. Climate affects agriculture, water availability, tourism, and infrastructure planning. Adaptation measures include irrigation, afforestation, and climate monitoring. The varied climate contributes to biodiversity, supporting unique ecosystems and wildlife across the country.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Military -->
+    <button class="accordion">Military 🪖</button>
+    <div class="panel">
+      <p>Argentina has a moderate-sized military consisting of the Army, Navy, and Air Force. It focuses on national defense, border security, disaster relief, and international peacekeeping missions. The military is equipped with modern vehicles, aircraft, naval vessels, and defense systems. Policies emphasize modernization, training, and strategic planning. Forces also engage in scientific research, emergency response, and support for civil authorities. The military ensures national sovereignty, regional stability, and contributes to Argentina’s international role in security and humanitarian operations.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Know The World | Argentina Page
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    const backBtn = document.getElementById("backBtn");
+
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        const panel = this.nextElementSibling;
+        const isVisible = panel.classList.contains("show");
+
+        // Hide all panels
+        document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+
+        if (!isVisible) {
+          panel.classList.add("show");
+          backBtn.style.display = "inline-block";
+          window.scrollTo({ top: panel.offsetTop - 20, behavior: 'smooth' });
+        } else {
+          backBtn.style.display = "none";
+        }
+      });
+    });
+
+    backBtn.addEventListener("click", () => {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+      backBtn.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
