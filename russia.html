@@ -1,123 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Russia - Know The World</title>
-<style>
-body { margin: 0; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; }
-header { text-align: center; padding: 30px 20px; }
-header h1 { font-size: 2.8rem; color: #ffdd57; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-header h2 { font-size: 1.8rem; color: #fff9c4; margin-top: 10px; font-weight: normal; }
-.topics { max-width: 900px; margin: 20px auto; display: flex; flex-direction: column; gap: 15px; }
-.topic-button { background: linear-gradient(135deg, #ff9966, #ff5e62); border: none; padding: 15px; font-size: 1.2rem; border-radius: 10px; cursor: pointer; transition: transform 0.3s; color: #fff; font-weight: bold; }
-.topic-button:hover { transform: scale(1.05); }
-.info { display: none; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; margin-top: 5px; line-height: 1.6; position: relative; }
-.back-button { display: inline-block; margin-bottom: 15px; padding: 8px 15px; background: #ffdd57; color: #000; font-weight: bold; border-radius: 8px; cursor: pointer; text-decoration: none; }
-.created-by { text-align: center; font-size: 1rem; margin-top: 15px; color: #ffeb3b; font-family: 'Pacifico', cursive; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russia - Know The World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #ffffff, #0000ff, #ff0000); /* Russian flag colors */
+      color: #000;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 0 0 10px 10px;
+    }
+    .capital {
+      font-size: 1rem;
+      color: #000;
+      margin-top: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .back-button {
+      display: none;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      background: #ffdd57;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .accordion {
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      color: #fff;
+    }
+    .accordion:nth-child(odd) {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    .accordion:nth-child(even) {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+    .accordion:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .panel {
+      padding: 15px;
+      display: none;
+      background: rgba(0,0,0,0.3);
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .created-by {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>🇷🇺 Russia</h1>
-<h2>Country: Russia</h2>
-</header>
+  <header>
+    🇷🇺 Russia
+    <div class="capital">Capital: Moscow</div>
+  </header>
 
-<div class="topics">
-<!-- Geography -->
-<button class="topic-button">Geography</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia, the largest country in the world, spans Eastern Europe and northern Asia, covering more than 17 million square kilometers. Its geography includes tundra, taiga, mountains, plains, and coastlines along the Arctic and Pacific Oceans. Major rivers like the Volga, Lena, Ob, and Amur provide transportation, irrigation, and hydroelectric power. Lake Baikal is the world’s deepest freshwater lake. Russia’s geography influences its climate, settlement patterns, agriculture, and economic development. The vast natural resources, including oil, gas, coal, and timber, are central to the economy. Climatic zones range from Arctic cold in the north to temperate regions in the west, affecting biodiversity, agriculture, and human habitation. Russia’s immense territory, geographic diversity, and strategic location make it a unique global power.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+  <div class="container">
+    <a href="#" class="back-button" id="backBtn">⬅️ Back to Topics</a>
 
-<!-- Population -->
-<button class="topic-button">Population</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia has a population of approximately 144 million, with ethnic Russians forming the majority. Other groups include Tatars, Ukrainians, Bashkirs, Chuvash, and more than 190 minority nationalities. Population density is higher in the European part of Russia, while Siberia and the Far East remain sparsely populated. Urbanization is significant, with Moscow and Saint Petersburg being the largest cities. Russia faces demographic challenges such as low birth rates, aging population, and regional population decline. Migration policies and social programs aim to stabilize population growth. Religious and cultural diversity shape social dynamics. The population structure impacts labor supply, education, healthcare, and economic planning across Russia’s vast territory.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Geography -->
+    <button class="accordion">Geography 🌏</button>
+    <div class="panel">
+      <p>Russia is the largest country in the world, spanning Eastern Europe and Northern Asia, covering over 17 million square kilometers. It has diverse landscapes including tundras, taigas, mountains like the Ural and Caucasus, vast plains, and numerous rivers such as the Volga, Ob, and Lena. Russia’s geographic size results in varied climates, from Arctic conditions in the north to continental climates in the interior. Natural resources are abundant, including oil, gas, coal, timber, and minerals. Geography has historically influenced settlement patterns, economic development, trade, and military strategy. Its proximity to Europe and Asia makes it geopolitically significant, and natural barriers like mountains and rivers have shaped defense strategies and cultural development.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<!-- Economy -->
-<button class="topic-button">Economy</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia’s economy is one of the largest globally, heavily reliant on natural resources. Oil, gas, coal, and minerals drive export revenues. The energy sector supplies Europe and Asia with petroleum and natural gas. Industries include metallurgy, machinery, chemicals, and defense. Agriculture produces grains, potatoes, vegetables, and livestock products. The services sector is growing in finance, IT, and trade, mainly in cities. Economic challenges include dependence on commodities, inflation, and regional disparities. Government programs aim to diversify the economy, develop infrastructure, and encourage innovation. Russia’s geographic and resource advantages support industrial development, international trade, and economic resilience. Economic growth influences population well-being, social stability, and global influence.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Population -->
+    <button class="accordion">Population 👥</button>
+    <div class="panel">
+      <p>Russia has a population of around 146 million people, making it the ninth-most populous country. The population is unevenly distributed; western Russia contains most of the population, including cities like Moscow and St. Petersburg, while Siberia and the Far East remain sparsely populated. Ethnically, Russia is diverse with over 190 ethnic groups, including Russians, Tatars, Ukrainians, Bashkirs, Chuvash, Chechens, and others. Major religions include Russian Orthodoxy, Islam, Buddhism, and Judaism. Population trends include low birth rates, high urbanization, and an aging population. Migration, both internal and international, affects demographic balance. Population density impacts economic development, regional policies, and social services, with rural depopulation being a growing challenge.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<!-- Government -->
-<button class="topic-button">Government</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia is a federal semi-presidential republic. The President is the head of state, and the Prime Minister leads the government. The Federal Assembly includes the State Duma and Federation Council. Regional governments have autonomy in local matters, while the federal government controls defense, foreign policy, and strategic industries. Russia’s constitution guarantees rights and freedoms, but power is highly centralized. Political parties, civil society, and media contribute to governance within centralized authority. Policies address social welfare, economic development, defense, and international relations. The Russian government’s structure impacts domestic and international decision-making, law enforcement, and public administration across its extensive territory.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Government -->
+    <button class="accordion">Government 🏛️</button>
+    <div class="panel">
+      <p>Russia is a federal semi-presidential republic. The President is the head of state with substantial powers, and the Prime Minister leads the government. The Federal Assembly consists of two houses: the State Duma and the Federation Council. Russia has 85 federal subjects including republics, territories, and regions. The judiciary is independent with the Constitutional Court as the highest authority. Political parties include United Russia, Communist Party, Liberal Democratic Party, and others. Federal governance is centralized, while regions have varying degrees of autonomy. Policies cover economic planning, defense, foreign affairs, social welfare, and regional development. The government is responsible for managing resources, infrastructure, and public services across its vast territory.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<!-- Culture -->
-<button class="topic-button">Culture</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia’s culture is shaped by centuries of history, literature, art, music, and religion. Russian literature boasts Tolstoy, Dostoevsky, and Pushkin. Classical music, ballet, and theater are globally influential, with Tchaikovsky and the Bolshoi Theater recognized worldwide. Architecture includes historic churches, palaces, and modern designs. Traditional festivals, religious observances, and folk art reflect cultural diversity. Cuisine varies regionally, featuring bread, meat, fish, and vegetables. Cultural heritage is preserved through museums, theaters, and arts education. Russian culture blends European and Asian influences, reflecting historical experiences, ethnic diversity, and geographic vastness. Modern Russia continues to innovate while honoring traditional artistic and literary achievements.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Economy -->
+    <button class="accordion">Economy 💹</button>
+    <div class="panel">
+      <p>Russia has a mixed economy with strong emphasis on natural resources. Oil, natural gas, coal, and minerals form the backbone of its export revenue. Industries include steel, machinery, chemicals, defense, aerospace, and agriculture. The service sector, including banking, IT, and retail, is growing. Russia faces challenges such as reliance on energy exports, regional disparities, and modernization of infrastructure. Trade partnerships with Europe, Asia, and CIS countries are vital. Government initiatives focus on economic diversification, energy development, and foreign investment. Economic policies aim to stabilize inflation, create jobs, modernize industry, and ensure sustainable growth across regions.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<!-- Climate -->
-<button class="topic-button">Climate</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia has diverse climates ranging from Arctic in the north to temperate in the west. Siberia experiences extremely cold winters with permafrost, while southern areas have warm summers and mild winters. Rainfall varies widely, with European Russia receiving more precipitation than eastern Siberia. Seasonal differences affect agriculture, transportation, and daily life. Extreme weather events, including snowstorms, floods, and heatwaves, impact infrastructure and population well-being. Climate influences settlement patterns, natural resource use, and economic activity. Russia’s vast territory and climatic diversity shape regional lifestyles, energy consumption, and ecological planning.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Agriculture -->
+    <button class="accordion">Agriculture 🌾</button>
+    <div class="panel">
+      <p>Agriculture in Russia contributes significantly to domestic food security. Key crops include wheat, barley, oats, potatoes, sugar beets, and sunflower. Livestock includes cattle, pigs, sheep, and poultry. Fertile lands like the Black Earth region are highly productive, while Siberia relies on mechanized farming. Modern agriculture uses machinery, fertilizers, and scientific methods to improve yields. Challenges include climatic extremes, soil erosion, and regional variation. Russia exports grain and other agricultural products. Government programs aim to support rural development, modern farming, food security, and sustainable agricultural practices to maintain competitiveness in global markets.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<!-- Tourism -->
-<button class="topic-button">Tourism</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Tourism in Russia is rich and varied, with historical, cultural, and natural attractions. Moscow and Saint Petersburg are famous for the Kremlin, Red Square, Hermitage Museum, and palaces. Lake Baikal, the Altai Mountains, and Kamchatka offer scenic and adventure tourism. Russia hosts cultural festivals, music, ballet, and theater events. Religious sites, historic towns, and UNESCO heritage locations attract international visitors. Infrastructure, transport, and hospitality services support tourism. The diversity of landscapes, history, and culture makes Russia a unique destination for travelers seeking education, recreation, and cultural experiences.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Culture -->
+    <button class="accordion">Culture 🎎</button>
+    <div class="panel">
+      <p>Russian culture is rich and varied, encompassing literature, music, dance, art, and traditions. Renowned writers include Tolstoy, Dostoevsky, and Pushkin. Classical music features Tchaikovsky and Rachmaninoff. Folk traditions, ballet, theatre, and painting are globally admired. Orthodox Christianity shapes religious festivals, architecture, and customs. Russian cuisine includes bread, soups, stews, and pastries, influenced by regional ingredients. Culture reflects historical influences, climate, and geography. Education, arts, and literature remain strong pillars of Russian identity. Cultural preservation and promotion continue through museums, festivals, performing arts, and international collaborations, enhancing global recognition.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<!-- Military -->
-<button class="topic-button">Military</button>
-<div class="info">
-<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-<p>
-Russia has one of the world’s most powerful militaries, including the Army, Navy, and Air Force. It possesses nuclear weapons, advanced missile systems, and modern armored and aerial equipment. The military ensures national security, defends borders, participates in peacekeeping, and conducts strategic operations. Modernization programs focus on technology, cyber capabilities, and defense innovation. Russia’s military strategy emphasizes global influence, regional stability, and rapid response to threats. Training, recruitment, and strategic alliances support defense readiness. The military is a central element of Russia’s political, economic, and international power.
-</p>
-<div class="created-by">Created By ♥️ Gourav</div>
-</div>
+    <!-- Climate -->
+    <button class="accordion">Climate ☀️❄️</button>
+    <div class="panel">
+      <p>Russia has a predominantly continental climate, with long, cold winters and short, warm summers. Arctic and subarctic conditions prevail in the north, while southern areas have temperate climates. Precipitation varies, with more in the west and less in Siberia. Winters bring snow, freezing temperatures, and harsh conditions. Summers allow agriculture, transport, and tourism. Climate affects agriculture, infrastructure, energy consumption, and human settlement. Challenges include climate change impacts, permafrost thawing, and extreme weather. Adaptation strategies include infrastructure planning, energy management, disaster preparedness, and environmental policies to mitigate climate effects and support sustainable living.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-</div>
+    <!-- Military -->
+    <button class="accordion">Military 🪖</button>
+    <div class="panel">
+      <p>Russia has one of the largest militaries in the world, comprising the Ground Forces, Navy, Aerospace Forces, and strategic missile troops. It maintains advanced weapons systems, including tanks, fighter jets, missiles, nuclear capabilities, and naval vessels. Modernization programs focus on technology, cyber defense, and strategic readiness. The military engages in domestic defense, border security, and international peacekeeping missions. Strategic policies aim to protect sovereignty, deter aggression, and maintain geopolitical influence. Russia’s armed forces contribute to disaster relief, civil support, and scientific research. Military service is integral to national security and international positioning, reflecting the country’s historical and strategic priorities.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
 
-<script>
-const buttons = document.querySelectorAll(".topic-button");
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const info = button.nextElementSibling;
-    info.style.display = "block";
-    window.scrollTo(0, 0);
-  });
-});
-</script>
+  </div>
 
-<div class="created-by">Created By ♥️ Gourav</div>
+  <footer>
+    © 2025 Know The World | Russia Page
+  </footer>
 
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    const backBtn = document.getElementById("backBtn");
+
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        const panel = this.nextElementSibling;
+        const isVisible = panel.classList.contains("show");
+
+        // Hide all panels
+        document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+
+        if(!isVisible) {
+          panel.classList.add("show");
+          backBtn.style.display = "inline-block";
+          window.scrollTo({ top: panel.offsetTop - 20, behavior: 'smooth' });
+        } else {
+          backBtn.style.display = "none";
+        }
+      });
+    });
+
+    backBtn.addEventListener("click", () => {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+      backBtn.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
