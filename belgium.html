@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belgium - Know The World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #000000, #ffd700, #ff0000); /* Belgium flag colors */
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 0 0 10px 10px;
+    }
+    .capital {
+      font-size: 1rem;
+      color: #fff;
+      margin-top: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .back-button {
+      display: none;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      background: #ffdd57;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .accordion {
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      color: #fff;
+    }
+    .accordion:nth-child(odd) {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    .accordion:nth-child(even) {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+    .accordion:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .panel {
+      padding: 15px;
+      display: none;
+      background: rgba(0,0,0,0.3);
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .created-by {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🇧🇪 Belgium
+    <div class="capital">Capital: Brussels</div>
+  </header>
+
+  <div class="container">
+    <a href="#" class="back-button" id="backBtn">⬅️ Back to Topics</a>
+
+    <!-- Geography -->
+    <button class="accordion">Geography 🌏</button>
+    <div class="panel">
+      <p>Belgium is a Western European country bordered by France, Germany, Luxembourg, and the Netherlands. It covers approximately 30,688 km², with diverse geography including coastal plains in the northwest, rolling hills in the central region, and the Ardennes forested highlands in the southeast. Rivers such as the Meuse and Scheldt support transport, trade, and water supply. The climate is temperate maritime with mild winters and cool summers. Belgium’s geography has historically influenced trade, agriculture, settlement patterns, and military strategies. Fertile soils allow cultivation of cereals, sugar beets, and vegetables. Urban centers like Brussels, Antwerp, and Ghent developed due to strategic location and river access. Coastal zones support ports and tourism, while forests and hills provide natural beauty, biodiversity, and recreational opportunities.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Population -->
+    <button class="accordion">Population 👥</button>
+    <div class="panel">
+      <p>Belgium has a population of over 11 million people, composed mainly of Flemish-speaking Flanders in the north, French-speaking Wallonia in the south, and a small German-speaking community in the east. Brussels is bilingual (French and Dutch) and serves as the capital. Population distribution is concentrated in urban centers, while rural areas maintain traditional lifestyles. Belgium has a high standard of living, good healthcare, and education systems. Demographic trends show aging population, moderate growth, and urban migration. Cultural diversity shapes traditions, cuisine, festivals, and social life. Immigration has contributed to multiculturalism, particularly in cities. Population policies focus on social welfare, housing, employment, and integration of communities, reflecting Belgium’s emphasis on inclusion and stability.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Government -->
+    <button class="accordion">Government 🏛️</button>
+    <div class="panel">
+      <p>Belgium is a federal parliamentary constitutional monarchy with King Philippe as the ceremonial head of state and a Prime Minister leading the government. The federal system divides powers among the federal, regional (Flanders, Wallonia, Brussels), and community governments responsible for language, culture, and local policies. The parliament is bicameral, consisting of the Chamber of Representatives and Senate. Belgium’s legal system is based on civil law, with an independent judiciary. The government emphasizes democracy, human rights, and social welfare. Political pluralism allows multiple parties to participate in governance, while coalition governments are common due to linguistic and regional diversity. Policies cover economic management, social services, infrastructure, foreign relations, and European Union collaboration.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Economy -->
+    <button class="accordion">Economy 💹</button>
+    <div class="panel">
+      <p>Belgium has a highly developed, diversified economy, with major sectors including services, industry, and trade. Key industries include chemicals, machinery, textiles, food processing, and diamonds. The service sector, particularly finance, logistics, and tourism, contributes significantly to GDP. Belgium has major ports, such as Antwerp, supporting international trade. Agricultural output includes cereals, sugar beets, vegetables, and dairy products. Belgium benefits from European Union membership, enabling trade and investment opportunities. Challenges include managing labor costs, regional disparities, and environmental sustainability. Government policies encourage innovation, infrastructure development, export promotion, and energy transition. Belgium’s economy is interconnected globally, maintaining stability, growth, and competitiveness in international markets.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Culture -->
+    <button class="accordion">Culture 🎎</button>
+    <div class="panel">
+      <p>Belgium has a rich cultural heritage influenced by Flemish, Walloon, and European traditions. Literature includes works in Dutch, French, and German. Art, architecture, and painting, especially Flemish masters like Rubens and Bruegel, are globally recognized. Music ranges from classical to folk and contemporary styles. Festivals include Carnival of Binche, Ommegang, and Belgian Beer Week. Belgian cuisine is famous for chocolate, waffles, fries, and beer. Languages, religion, and regional customs influence arts, social norms, and celebrations. Cultural preservation is emphasized via museums, galleries, education, and heritage sites. Belgium also plays a role in European cultural exchange and diplomacy.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Climate -->
+    <button class="accordion">Climate ☀️❄️</button>
+    <div class="panel">
+      <p>Belgium has a temperate maritime climate with mild winters, cool summers, and moderate rainfall throughout the year. Seasonal variation is limited, but western coastal regions experience more precipitation than inland areas. Climate supports agriculture, forestry, and natural ecosystems. Occasional storms and floods occur, and the government implements environmental management, flood prevention, and sustainable land use strategies. Climate contributes to Belgium’s flora, fauna, tourism, and energy planning. Seasonal weather patterns shape lifestyle, festivals, and outdoor activities.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+    <!-- Military -->
+    <button class="accordion">Military 🪖</button>
+    <div class="panel">
+      <p>Belgium has a professional military force consisting of the Army, Air Force, Navy, and Medical Corps. Its roles include national defense, disaster relief, and peacekeeping missions. Belgium participates actively in NATO and UN operations. Modernization focuses on training, technology, and interoperability with allies. The military also supports civil authorities during emergencies and environmental disasters. Belgium’s armed forces maintain readiness, sovereignty, and international cooperation while contributing to regional security and humanitarian aid.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Know The World | Belgium Page
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    const backBtn = document.getElementById("backBtn");
+
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        const panel = this.nextElementSibling;
+        const isVisible = panel.classList.contains("show");
+
+        document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+
+        if(!isVisible) {
+          panel.classList.add("show");
+          backBtn.style.display = "inline-block";
+          window.scrollTo({ top: panel.offsetTop - 20, behavior: 'smooth' });
+        } else {
+          backBtn.style.display = "none";
+        }
+      });
+    });
+
+    backBtn.addEventListener("click", () => {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+      backBtn.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
