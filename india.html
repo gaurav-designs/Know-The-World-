@@ -6,122 +6,161 @@
   <title>India - Know The World</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f6d365, #fda085);
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
     }
     header {
       text-align: center;
-      padding: 20px;
-      background: #ff5722;
+      padding: 30px 20px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffdd57;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    header h2 {
+      font-size: 1.8rem;
+      color: #fff9c4;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+    .topics {
+      max-width: 900px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .topic-button {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
       color: #fff;
-      font-size: 2rem;
       font-weight: bold;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
+    .topic-button:hover { transform: scale(1.05); }
+    .info {
+      display: none;
+      background: rgba(0,0,0,0.3);
       padding: 20px;
+      border-radius: 10px;
+      margin-top: 5px;
+      line-height: 1.6;
+      position: relative;
     }
-    .accordion {
-      background: #fff;
-      color: #333;
-      cursor: pointer;
-      padding: 15px;
-      margin: 10px 0;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 1.2rem;
+    .back-button {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 15px;
+      background: #ffdd57;
+      color: #000;
       font-weight: bold;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
     }
-    .accordion:hover {
-      background: #ffcc80;
-      color: #000;
-    }
-    .panel {
-      padding: 0 15px;
-      display: none;
-      background: #f9f9f9;
-      border-radius: 0 0 8px 8px;
-      margin-bottom: 10px;
-      line-height: 1.6;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .panel.show {
-      display: block;
-      animation: fadeIn 0.5s;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    footer {
+    .created-by {
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-      background: rgba(0,0,0,0.3);
-      color: #fff;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive;
     }
   </style>
 </head>
 <body>
-  <header>🇮🇳 India</header>
+  <header>
+    <h1>🇮🇳 India</h1>
+    <h2>Country: India</h2>
+  </header>
 
-  <div class="container">
-    <button class="accordion">Geography 🌏</button>
-    <div class="panel">
-      <p>India is the 7th largest country in the world, located in South Asia. It has the Himalayas in the north, fertile plains of the Ganga, deserts of Rajasthan, and long coastlines along the Arabian Sea and Bay of Bengal.</p>
+  <div class="topics">
+    <!-- Geography -->
+    <button class="topic-button">Geography</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        India, located in South Asia, is the seventh-largest country in the world and the second most populous. Its geography is incredibly diverse, spanning the towering Himalayan mountains in the north, fertile plains along the Ganga and Brahmaputra rivers, arid deserts in the west, and tropical coastlines along the Arabian Sea and Bay of Bengal. The northern Himalayas contain some of the world's highest peaks, glaciers, and river systems that provide water for millions of people. Central India is dominated by the Deccan Plateau with rich soils and mineral deposits. The western arid regions, like the Thar Desert, experience extreme temperatures and scarce rainfall. Coastal plains and southern peninsulas host tropical forests, wetlands, and fertile agricultural lands. India has over 2,900 kilometers of coastline and numerous rivers, lakes, and reservoirs that support irrigation, hydroelectric power, and trade. The diverse terrain shapes climate, agriculture, and biodiversity, influencing the livelihoods and culture of people across regions. From tropical rainforests in the northeast to alpine meadows in the north, India’s geography is a source of natural wealth and strategic advantage, contributing to its economic, cultural, and ecological diversity.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button class="accordion">Population 👥</button>
-    <div class="panel">
-      <p>India has a population of over 1.4 billion people, making it one of the most populous countries. It is highly diverse with various religions, languages, and cultures.</p>
+    <!-- Population -->
+    <button class="topic-button">Population</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        India’s population exceeds 1.4 billion people, making it the second most populous country in the world. Its population is ethnically, linguistically, and culturally diverse. Major ethnic groups include Indo-Aryans in the north, Dravidians in the south, and numerous tribal communities in central and northeastern regions. The country has over 22 officially recognized languages and more than 1,600 dialects. Urbanization is growing, with cities like Mumbai, Delhi, and Bangalore becoming economic hubs. Rural areas still host the majority of the population, mainly engaged in agriculture. India’s population is young, with a large proportion under 35, offering demographic advantages for economic growth but challenges in employment, education, and healthcare. Religious diversity is significant, with Hinduism, Islam, Christianity, Sikhism, Buddhism, and Jainism widely practiced. Population density varies widely, from crowded cities to sparsely populated deserts and mountains. Government policies focus on family planning, education, and social welfare to manage growth sustainably while leveraging human capital for national development.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button class="accordion">Government 🏛️</button>
-    <div class="panel">
-      <p>India is the largest democracy in the world. It has a parliamentary system of government with a President as the head of state and a Prime Minister as the head of government.</p>
+    <!-- Economy -->
+    <button class="topic-button">Economy</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        India has one of the world's largest and fastest-growing economies. It is diverse, with agriculture, industry, and services as major sectors. Agriculture employs millions, producing rice, wheat, sugarcane, cotton, and spices. Industries include textiles, chemicals, steel, automobiles, and information technology. Services such as software, finance, telecommunications, and tourism contribute significantly to GDP. India is a global IT hub, with cities like Bangalore, Hyderabad, and Pune hosting many technology firms. Economic reforms since the 1990s have liberalized trade, encouraged foreign investment, and supported entrepreneurship. India is a major exporter of software, gems, jewelry, textiles, and agricultural products. Challenges include rural poverty, income inequality, unemployment, and infrastructure deficits. Government initiatives like “Make in India,” digital economy development, and renewable energy projects aim to boost growth and sustainability. India’s diverse economy, demographic advantage, and global trade relations position it as a rising economic power in the 21st century.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button class="accordion">Economy 💹</button>
-    <div class="panel">
-      <p>India has a fast-growing economy. It is known for agriculture, information technology, textiles, and services. It is also one of the largest emerging markets in the world.</p>
+    <!-- Government -->
+    <button class="topic-button">Government</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        India is a federal parliamentary democratic republic with a President as the head of state and a Prime Minister as the head of government. The country has a multi-tier governance system consisting of the central government, state governments, and local authorities. The Constitution of India, adopted in 1950, guarantees fundamental rights, separation of powers, and rule of law. India has a bicameral legislature, comprising the Lok Sabha (House of the People) and the Rajya Sabha (Council of States). The judiciary is independent and includes the Supreme Court, high courts, and lower courts. Elections are held regularly at national, state, and local levels, ensuring representative governance. Political parties and civil society play a major role in shaping policies and public discourse. The government implements programs for social welfare, economic development, education, healthcare, and infrastructure development. Federalism allows states to manage regional affairs, while national policies promote integration and development. India’s governance model is one of the largest democratic systems in the world, balancing diversity, rule of law, and citizen participation.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button class="accordion">Agriculture 🌾</button>
-    <div class="panel">
-      <p>Agriculture plays a vital role in India’s economy. The country produces rice, wheat, sugarcane, cotton, and spices in large quantities.</p>
+    <!-- Culture -->
+    <button class="topic-button">Culture</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        India has an incredibly rich and diverse culture shaped by centuries of history, religious traditions, and regional diversity. Its culture encompasses music, dance, literature, architecture, festivals, cuisine, and clothing. Classical music and dance forms, such as Bharatanatyam, Kathak, and Carnatic music, coexist with popular modern forms. Festivals like Diwali, Holi, Eid, Christmas, and Navratri are celebrated nationwide with regional variations. Indian cuisine is diverse, ranging from spicy curries in the south to sweets in the north, reflecting local ingredients and traditions. Art, handicrafts, and textiles are integral, with regions known for unique styles like Madhubani painting, Pashmina shawls, and Kanjeevaram silk. Religion, philosophy, and social norms deeply influence Indian society. Bollywood, India’s film industry, is one of the largest in the world, contributing to modern popular culture. Cultural diversity is preserved through language, traditions, and education, while globalization and technology continue to shape contemporary Indian culture.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button class="accordion">Climate ☀️❄️</button>
-    <div class="panel">
-      <p>India has varied climates ranging from tropical in the south to alpine in the north. The monsoon rains between June and September are important for agriculture.</p>
+    <!-- Climate -->
+    <button class="topic-button">Climate</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        India’s climate is largely tropical but varies significantly due to its diverse geography. The northern Himalayas experience alpine and tundra climates with heavy snowfall in winters. The Indo-Gangetic plains have a subtropical climate with hot summers, cold winters, and seasonal monsoon rains. Central India and the Deccan Plateau experience semi-arid and tropical wet-dry climates. Western deserts like the Thar experience extremely high temperatures in summer and very low rainfall. Coastal regions enjoy tropical wet climate with moderate temperatures and high humidity. The southwest monsoon, occurring from June to September, brings the majority of annual rainfall, critical for agriculture and water resources. India’s climate influences agriculture, water supply, biodiversity, and urban planning. Extreme weather events such as cyclones, floods, and heatwaves are common challenges. Seasonal variations also affect festivals, cultural events, and daily life. Regional climates shape crop patterns, clothing, architecture, and settlement patterns across the country.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
 
-    <button class="accordion">Culture 🎭</button>
-    <div class="panel">
-      <p>India has one of the world’s oldest and richest cultures. Festivals like Diwali, Holi, and Eid are widely celebrated. Indian classical music, dance, yoga, and cuisine are globally famous.</p>
+    <!-- Tourism -->
+    <button class="topic-button">Tourism</button>
+    <div class="info">
+      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+      <p>
+        Tourism in India is diverse, reflecting its natural beauty, historical heritage, and cultural richness. Popular destinations include the Taj Mahal in Agra, Jaipur’s palaces, Kerala’s backwaters, and the Himalayan hill stations. India offers experiences in wildlife sanctuaries, national parks, deserts, beaches, and mountains. Religious tourism is significant, with millions visiting temples, mosques, churches, and gurudwaras. Festivals like Diwali, Holi, and Pushkar Camel Fair attract domestic and international tourists. Adventure tourism activities include trekking in the Himalayas, river rafting in Rishikesh, paragliding in Himachal Pradesh, and desert safaris in Rajasthan. Culinary tourism is popular, offering diverse regional cuisines. The government promotes sustainable tourism and development through initiatives like “Incredible India” to enhance infrastructure, hospitality, and cultural experiences. India’s tourism contributes significantly to employment, GDP, and international image, showcasing the country’s heritage, diversity, and natural landscapes.
+      </p>
+      <div class="created-by">Created By ♥️ Gourav</div>
     </div>
+
   </div>
 
-  <footer>
-    © 2025 Know The World | India Page
-  </footer>
+  <div class="created-by">Created By ♥️ Gourav</div>
 
   <script>
-    const acc = document.querySelectorAll(".accordion");
-    acc.forEach(button => {
-      button.addEventListener("click", function() {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        panel.classList.toggle("show");
+    const buttons = document.querySelectorAll(".topic-button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const info = button.nextElementSibling;
+        info.style.display = info.style.display === "block" ? "none" : "block";
       });
     });
   </script>
