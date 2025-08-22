@@ -1,159 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>India - Know The World</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-    }
-    header {
-      text-align: center;
-      padding: 30px 20px;
-    }
-    header h1 {
-      font-size: 2.8rem;
-      color: #ffdd57;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
-    header h2 {
-      font-size: 1.8rem;
-      color: #fff9c4;
-      margin-top: 10px;
-      font-weight: normal;
-    }
-    .topics {
-      max-width: 900px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .topic-button {
-      background: linear-gradient(135deg, #ff9966, #ff5e62);
-      border: none;
-      padding: 15px;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s;
-      color: #fff;
-      font-weight: bold;
-    }
-    .topic-button:hover { transform: scale(1.05); }
-    .info {
-      display: none;
-      background: rgba(0,0,0,0.3);
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 5px;
-      line-height: 1.6;
-      position: relative;
-    }
-    .back-button {
-      display: inline-block;
-      margin-bottom: 15px;
-      padding: 8px 15px;
-      background: #ffdd57;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .created-by {
-      text-align: center;
-      font-size: 1rem;
-      margin-top: 15px;
-      color: #ffeb3b;
-      font-family: 'Pacifico', cursive;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India - Know The World</title>
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+}
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+header h1 {
+  font-size: 2.8rem;
+  color: #ffdd57;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+header h2 {
+  font-size: 1.8rem;
+  color: #fff9c4;
+  margin-top: 10px;
+  font-weight: normal;
+}
+.topics {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.topic-button {
+  border: none;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.topic-button:nth-child(2n) {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+.topic-button:nth-child(3n) {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #333;
+}
+.topic-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+.info {
+  display: none;
+  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 5px;
+  line-height: 1.6;
+  position: relative;
+}
+.back-button {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  background: #ffdd57;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.created-by {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 15px;
+  color: #ffeb3b;
+  font-family: 'Pacifico', cursive;
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>🇮🇳 India</h1>
-    <h2>Country: India</h2>
-  </header>
+<header>
+<h1>🇮🇳 India</h1>
+<h2>Country: India</h2>
+</header>
 
-  <div class="topics">
-    <!-- Geography -->
-    <button class="topic-button">Geography</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India, located in South Asia, is the seventh-largest country in the world by area. Its geography is incredibly diverse, ranging from the towering Himalayan mountains in the north to the fertile plains of the Indo-Gangetic region, arid deserts in the west, and tropical coastal regions along the Arabian Sea and Bay of Bengal. India has major rivers including the Ganges, Brahmaputra, Yamuna, and Godavari, which play vital roles in agriculture, transportation, and energy. The country also has extensive forests, wetlands, and biodiversity hotspots. Mountain ranges like the Himalayas and Western Ghats influence climate, rainfall, and vegetation. India’s geographic diversity supports varied agriculture, industry, and cultural practices. Natural resources such as coal, iron, bauxite, and petroleum significantly contribute to the economy. The diverse geography has shaped settlement patterns, infrastructure development, and the rich cultural and historical heritage of India.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<div class="topics">
+<!-- Geography -->
+<button class="topic-button">Geography</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India, located in South Asia, is a vast country with diverse geographical features. It is the seventh-largest country by area and contains mountains, plains, deserts, plateaus, rivers, and extensive coastlines. The Himalayas in the north include some of the tallest peaks on Earth, such as Kanchenjunga, influencing climate and rivers like the Ganges and Brahmaputra. The Indo-Gangetic plains are fertile and support dense populations. Western India has arid deserts, while southern India consists of the Deccan Plateau and tropical regions. India’s rivers, mountains, forests, and coastal zones provide resources for agriculture, industry, and biodiversity. Geographic diversity affects settlement, trade, culture, and economic development. Natural resources, including minerals and forests, are distributed across different terrains. Mountains and deserts influence monsoons, rainfall, and climate zones, making India ecologically and climatically diverse.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
 
-    <!-- Population -->
-    <button class="topic-button">Population</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India’s population exceeds 1.4 billion, making it the second-most populous country in the world. The population is ethnically, linguistically, and culturally diverse, with more than 2,000 distinct ethnic groups and over 22 officially recognized languages. Major religions include Hinduism, Islam, Christianity, Sikhism, Buddhism, and Jainism. The population is unevenly distributed, with dense concentrations in northern plains and coastal regions, while hilly and desert regions are sparsely populated. Urbanization is increasing rapidly, with major metropolitan areas like Delhi, Mumbai, and Bangalore serving as economic, educational, and cultural hubs. India has a young demographic profile, with a large portion of the population under 35, providing opportunities for workforce growth. Challenges include rural poverty, unemployment, gender disparities, and access to education and healthcare. Policies on family planning, education, and social welfare aim to ensure sustainable population growth and social development across India.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<!-- Population -->
+<button class="topic-button">Population</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India has a population of over 1.4 billion, second only to China. It is highly diverse, consisting of multiple ethnic groups such as Indo-Aryans, Dravidians, and tribal communities. The country recognizes 22 official languages, including Hindi and English, and hundreds of regional dialects. Population density varies, with northern plains and metropolitan areas highly populated, while deserts, mountains, and northeastern regions have fewer people. Rapid urbanization has created megacities like Mumbai, Delhi, and Bangalore. Demographics influence labor markets, education, healthcare, infrastructure, and social services. Migration, fertility rates, and youth population provide both opportunities and challenges. Social policies aim to balance growth with sustainability, address poverty, gender disparities, and urban-rural imbalances. India’s population contributes to cultural richness, economic development, and global influence.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
 
-    <!-- Economy -->
-    <button class="topic-button">Economy</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India has one of the largest and fastest-growing economies in the world. The economy is diversified across agriculture, industry, and services. Agriculture employs a significant portion of the population, producing rice, wheat, sugarcane, cotton, tea, and spices. India has a strong industrial sector including textiles, steel, automobiles, chemicals, and electronics. The services sector, including IT, finance, telecommunications, and tourism, contributes the largest share to GDP. Economic reforms since the 1990s have encouraged foreign investment, liberalized trade, and promoted entrepreneurship. India is a major exporter of software, textiles, jewelry, and agricultural products. Challenges include income inequality, poverty, and regional disparities. Government initiatives like “Make in India,” digitalization, and infrastructure development aim to enhance productivity, employment, and sustainable growth. India’s diverse resources and demographic advantages make it a rising global economic power.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<!-- Economy -->
+<button class="topic-button">Economy</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India has a fast-growing mixed economy combining agriculture, industry, and services. Agriculture employs millions, producing rice, wheat, sugarcane, tea, and cotton. Industrial sectors include textiles, chemicals, pharmaceuticals, automobiles, and steel. Services, particularly IT, finance, telecommunications, and tourism, contribute the largest portion of GDP. India is rich in natural resources such as coal, iron, bauxite, and petroleum. Economic liberalization, foreign investment, and infrastructure development have boosted growth. Special Economic Zones encourage exports and manufacturing. Urbanization drives consumption, labor markets, and industrial growth. Government initiatives such as Make in India and Digital India promote innovation, industrial development, and sustainable growth. Challenges include poverty, regional disparities, infrastructure gaps, and environmental concerns. India’s economy continues to expand globally due to a young workforce, technology adoption, and trade integration.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
 
-    <!-- Government -->
-    <button class="topic-button">Government</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India is a federal parliamentary democratic republic. The President is the head of state, while the Prime Minister is the head of government. The Parliament is bicameral, consisting of the Lok Sabha (House of the People) and Rajya Sabha (Council of States). India’s judiciary is independent, with the Supreme Court, high courts, and lower courts. Elections are conducted at national, state, and local levels, ensuring representative governance. The Constitution guarantees fundamental rights, separation of powers, and rule of law. States have autonomy in regional matters, while the central government handles defense, foreign policy, and economic planning. India’s democratic institutions accommodate its diverse population, cultures, and languages. Political parties, civil society, and media play key roles in governance. Policies focus on social welfare, economic growth, and maintaining internal and external security.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<!-- Government -->
+<button class="topic-button">Government</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India is a federal parliamentary democratic republic. The President is the ceremonial head of state, while the Prime Minister is the executive head. The Parliament is bicameral, consisting of Lok Sabha and Rajya Sabha. India has 28 states and 8 union territories, each with elected governments. The judiciary is independent with the Supreme Court at the apex. India’s democracy guarantees political pluralism, freedom of speech, and fundamental rights. Elections occur at local, state, and national levels. Policies cover economic growth, social welfare, regional development, education, and health. Administrative powers are decentralized to states while the central government handles defense, foreign affairs, and national planning. Governance balances diversity, social justice, and sustainable development.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
 
-    <!-- Culture -->
-    <button class="topic-button">Culture</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India has a rich and diverse cultural heritage spanning thousands of years. Music, dance, literature, architecture, festivals, cuisine, and clothing vary across regions. Classical dance forms include Bharatanatyam, Kathak, and Odissi, while folk dances reflect local traditions. Indian literature includes ancient texts like the Vedas, Mahabharata, Ramayana, and modern works by authors like Rabindranath Tagore and R.K. Narayan. Festivals such as Diwali, Holi, Eid, Christmas, and regional harvest celebrations are widely observed. Architecture ranges from ancient temples and forts to Mughal monuments and modern skyscrapers. Indian cuisine is known for its spices, variety of vegetarian and non-vegetarian dishes, and regional specialties. Bollywood, India’s film industry, has global influence. Cultural practices are preserved while adapting to modernization, reflecting India’s blend of tradition and contemporary life.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<!-- Culture -->
+<button class="topic-button">Culture</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India has one of the world’s richest cultures, shaped by thousands of years of history. Religion, language, festivals, art, music, and dance vary widely across regions. Hinduism, Islam, Christianity, Sikhism, Buddhism, and Jainism influence traditions and celebrations. Classical dance forms include Bharatanatyam, Kathak, Odissi, and Kuchipudi, while music spans Hindustani and Carnatic traditions. Literature includes ancient epics, regional poetry, and modern novels. Festivals like Diwali, Holi, Eid, Christmas, and regional harvest celebrations highlight cultural diversity. Cuisine varies with spices, ingredients, and regional tastes. Clothing, rituals, and daily practices differ across states. Urbanization and globalization continue to influence cultural evolution. Museums, educational programs, and art institutions preserve heritage and promote contemporary creativity. India’s culture fosters social cohesion, education, tourism, and international recognition.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
 
-    <!-- Climate -->
-    <button class="topic-button">Climate</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India’s climate is largely tropical, influenced by geography and the monsoon. Northern regions experience cool winters and hot summers, while southern regions are warm year-round. The southwest monsoon brings heavy rainfall from June to September, essential for agriculture. Eastern India receives high rainfall, supporting lush vegetation, whereas western regions like Rajasthan are arid. The Himalayan region experiences snow and alpine conditions. Climate affects agriculture, water resources, and lifestyle. Extreme events like cyclones, floods, and droughts occur in some areas. Seasonal variations influence festivals, tourism, and regional activities. India’s diverse climate zones contribute to biodiversity and regional agricultural patterns, making the country ecologically rich and varied.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<!-- Climate -->
+<button class="topic-button">Climate</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India has diverse climates influenced by its geography, monsoon winds, and topography. The north features alpine conditions, central plains have subtropical weather, western deserts are arid, and southern regions are tropical. India experiences four main seasons: winter, summer, monsoon, and post-monsoon. The southwest monsoon (June-September) is vital for agriculture, replenishing rivers and groundwater. Variability in rainfall causes floods or droughts in different regions
 
-    <!-- Tourism -->
-    <button class="topic-button">Tourism</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-Tourism in India is diverse, reflecting its natural beauty, cultural heritage, and historical monuments. Popular destinations include the Taj Mahal, Jaipur’s forts, Kerala’s backwaters, Rajasthan’s deserts, the Himalayan hill stations, and Goa’s beaches. India’s wildlife sanctuaries and national parks, like Ranthambore and Kaziranga, attract nature enthusiasts. Religious tourism is significant, with temples, mosques, churches, and monasteries visited by millions. Festivals, cuisine, and traditional arts enhance the tourist experience. Adventure tourism includes trekking, rafting, and skiing in mountainous regions. Infrastructure development, hospitality, and government campaigns promote tourism, making India a global travel destination. Tourism contributes significantly to employment, regional development, and cultural preservation.
-      </p>
-      <div class="created-by">Created By ♥️ Gourav</div>
-    </div>
+<!-- Tourism -->
+<button class="topic-button">Tourism</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+Tourism in India is a significant part of the economy, showcasing cultural, historical, spiritual, and natural attractions. India’s rich heritage includes monuments like the Taj Mahal, Jaipur palaces, Mysore Palace, Qutub Minar, and ancient temples. Spiritual tourism is popular, with pilgrimage sites such as Varanasi, Haridwar, Rishikesh, Amritsar, and Tirupati drawing millions annually. Nature tourism includes Himalayan trekking, Kerala backwaters, Sundarbans mangroves, desert safaris in Rajasthan, and wildlife sanctuaries across the country. Festivals and fairs attract domestic and international visitors, reflecting India’s vibrant traditions. Urban centers like Delhi, Mumbai, and Bangalore offer modern infrastructure, cultural events, and shopping experiences. Government initiatives like “Incredible India” and improved transport, hospitality, and safety measures have enhanced tourism growth. Tourism generates employment in hospitality, transport, crafts, and services. Sustainable tourism practices are being promoted to preserve heritage sites, natural habitats, and cultural authenticity. India’s diverse attractions make it a global destination, blending history, spirituality, nature, and modern experiences into a unique travel experience.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
 
-    <!-- Military -->
-    <button class="topic-button">Military</button>
-    <div class="info">
-      <a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
-      <p>
-India has one of the largest and most advanced militaries in the world, structured into the Indian Army, Indian Navy, and Indian Air Force. The armed forces are responsible for defending national sovereignty, securing borders, and maintaining internal security. India has nuclear capabilities and a robust missile program, including ballistic and cruise missiles. The military is engaged in peacekeeping operations, counterinsurgency, disaster response, and border security. Modernization programs focus on acquiring advanced aircraft, naval vessels, tanks, and electronic warfare systems. India’s defense industry, including organizations like DRDO and HAL, supports indigenous production of weapons and equipment. Strategic alliances, regional cooperation, and defense exercises enhance India’s security posture. The military plays a
+<!-- Military -->
+<button class="topic-button">Military</button>
+<div class="info">
+<a class="back-button" onclick="this.parentElement.style.display='none'">← Back</a>
+<p>
+India has one of the world’s largest and most advanced militaries, comprising the Indian Army, Navy, Air Force, and paramilitary forces. The military is responsible for defending the nation’s borders, ensuring internal security, and participating in international peacekeeping operations. India has a diverse defense strategy due to its strategic location, long borders with Pakistan, China, and other neighboring countries, and maritime interests in the Indian Ocean. The army is well-equipped with modern tanks, artillery, and infantry units, while the air force operates advanced fighter jets, transport aircraft, and surveillance systems. The navy maintains security along India’s extensive coastline, operating warships, submarines, and aircraft carriers. India has developed indigenous defense technology, including missiles, tanks, naval vessels, and aircraft, through institutions like DRDO and HAL. Defense cooperation, strategic partnerships, and joint exercises strengthen military readiness. The armed forces are involved in disaster relief, humanitarian operations, and border security. Military service is respected culturally, and recruitment emphasizes discipline, training, and national service. India’s military continues to modernize, balancing conventional defense, technological advancement, and strategic deterrence to protect sovereignty and maintain regional stability.
+</p>
+<div class="created-by">Created By ♥️ Gourav</div>
+</div>
+
+</div>
+
+<script>
+// Show/Hide topic content
+const buttons = document.querySelectorAll('.topic-button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const infoDiv = button.nextElementSibling;
+    infoDiv.style.display = infoDiv.style.display === 'block' ? 'none' : 'block';
+    window.scrollTo(0, infoDiv.offsetTop - 20);
+  });
+});
+</script>
+</body>
+</html>
