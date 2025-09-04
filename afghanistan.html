@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afghanistan - Know The World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #000000, #d32011, #007a36); /* Afghanistan flag colors */
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 0 0 10px 10px;
+    }
+    .capital {
+      font-size: 1rem;
+      color: #000;
+      margin-top: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .back-button {
+      display: none;
+      margin-bottom: 15px;
+      padding: 8px 16px;
+      background: #ffdd57;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .accordion {
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      color: #fff;
+    }
+    .accordion:nth-child(odd) {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    .accordion:nth-child(even) {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+    .accordion:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    .panel {
+      padding: 15px;
+      display: none;
+      background: rgba(0,0,0,0.3);
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .panel.show {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .created-by {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #ffeb3b;
+      font-family: 'Pacifico', cursive;
+    }
+    .topic-back {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: #ffdd57;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🇦🇫 Afghanistan
+    <div class="capital">Capital: Kabul</div>
+  </header>
+
+  <div class="container">
+    <a href="#" class="back-button" id="backBtn">⬅️ Back to Topics</a>
+
+    <!-- Geography -->
+    <button class="accordion">Geography 🌏</button>
+    <div class="panel">
+      <p>Afghanistan is a landlocked country located at the crossroads of South Asia and Central Asia. It covers around 652,000 square kilometers and shares borders with Pakistan, Iran, Turkmenistan, Uzbekistan, Tajikistan, and China. The Hindu Kush mountains dominate much of its terrain, creating both natural beauty and geographic challenges. Afghanistan’s climate varies from arid deserts to snowy mountain regions, with cold winters and hot summers. Rivers like the Amu Darya and Helmand are important for irrigation and agriculture. The country’s mountainous landscape has historically made travel and communication difficult, influencing its cultural diversity and political history.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+      <a class="topic-back" onclick="goBackToTopics()">⬅ Back</a>
+    </div>
+
+    <!-- Population -->
+    <button class="accordion">Population 👥</button>
+    <div class="panel">
+      <p>Afghanistan has a population of about 41 million people. It is ethnically diverse, including Pashtuns, Tajiks, Hazaras, Uzbeks, and other minority groups. The population is mostly rural, with urban centers like Kabul, Kandahar, Herat, and Mazar-i-Sharif being more densely populated. Islam is the dominant religion, with the majority being Sunni Muslims and a smaller Shia minority. Dari (Persian) and Pashto are the two official languages. The population is young, with a large percentage under 25, which creates opportunities but also challenges in education, employment, and healthcare. Migration, both internal and external, has been a major trend due to wars and instability.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+      <a class="topic-back" onclick="goBackToTopics()">⬅ Back</a>
+    </div>
+
+    <!-- Government -->
+    <button class="accordion">Government 🏛️</button>
+    <div class="panel">
+      <p>Afghanistan has undergone significant political changes in recent decades. Historically a monarchy, it has experienced coups, communist rule, foreign interventions, and civil wars. After 2001, it became an Islamic Republic with elected governments, but in 2021, the Taliban regained control and established the Islamic Emirate of Afghanistan. Governance is centralized under the Taliban, with Islamic law (Sharia) as the foundation. The international community remains divided in recognizing the current government. Political instability has deeply affected foreign relations, development, and the daily lives of Afghan citizens.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+      <a class="topic-back" onclick="goBackToTopics()">⬅ Back</a>
+    </div>
+
+    <!-- Economy -->
+    <button class="accordion">Economy 💹</button>
+    <div class="panel">
+      <p>Afghanistan’s economy is primarily based on agriculture, mining, and trade. Major crops include wheat, fruits, nuts, and opium poppies. It is rich in natural resources such as copper, iron, lithium, and rare earth minerals, though political instability has prevented large-scale development. The economy faces challenges due to decades of conflict, poor infrastructure, sanctions, and lack of foreign investment. Unemployment and poverty rates remain high, with international aid historically playing a major role in supporting the economy. Informal markets and cross-border trade are vital for survival in rural areas.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+      <a class="topic-back" onclick="goBackToTopics()">⬅ Back</a>
+    </div>
+
+    <!-- Culture -->
+    <button class="accordion">Culture 🎎</button>
+    <div class="panel">
+      <p>Afghanistan has a rich cultural heritage shaped by its position on the Silk Road. Persian and Central Asian influences are deeply rooted in its poetry, art, and architecture. Traditional Afghan music and dance, such as the Attan, play an important role in celebrations. Hospitality is a cornerstone of Afghan culture, and food such as kabuli pulao, naan, kebabs, and dried fruits are widely enjoyed. Despite modern challenges, cultural traditions continue to thrive in family and community life. Afghanistan’s cultural identity reflects resilience, spirituality, and centuries of blending different civilizations.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+      <a class="topic-back" onclick="goBackToTopics()">⬅ Back</a>
+    </div>
+
+    <!-- Military -->
+    <button class="accordion">Military 🪖</button>
+    <div class="panel">
+      <p>Afghanistan’s military history is long and complex, with the region often described as the “graveyard of empires” due to resistance against foreign invasions. Currently, the Taliban controls military and security forces under the Islamic Emirate. In the past, the Afghan National Defense and Security Forces (ANDSF) worked with international partners, but after 2021, their role diminished. Today, security forces focus on maintaining order, border security, and internal stability. The country faces ongoing threats from extremist groups and insurgencies, making defense a critical issue for governance and survival.</p>
+      <div class="created-by">Created By ♥️ Gourav</div>
+      <a class="topic-back" onclick="goBackToTopics()">⬅ Back</a>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Know The World | Afghanistan Page
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    const backBtn = document.getElementById("backBtn");
+
+    acc.forEach(button => {
+      button.addEventListener("click", function() {
+        const panel = this.nextElementSibling;
+        const isVisible = panel.classList.contains("show");
+
+        document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+
+        if (!isVisible) {
+          panel.classList.add("show");
+          backBtn.style.display = "inline-block";
+          window.scrollTo({ top: panel.offsetTop - 20, behavior: 'smooth' });
+        } else {
+          backBtn.style.display = "none";
+        }
+      });
+    });
+
+    backBtn.addEventListener("click", () => {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+      backBtn.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function goBackToTopics() {
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("show"));
+      backBtn.style.display = "none";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
